@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Anchor, BedDouble, CalendarDays, Camera, CheckCircle2, Dumbbell, ExternalLink, Heart, MapPin, MessageCircle, Palmtree, ShieldCheck, Sparkles, Star, Sun, Waves } from 'lucide-react';
+import { Anchor, BedDouble, CalendarDays, Camera, CheckCircle2, Dumbbell, ExternalLink, Heart, Mail, MapPin, MessageCircle, Palmtree, ShieldCheck, Sparkles, Star, Sun, Waves, Wifi, Car, Snowflake, LockKeyhole, Plug, Utensils, HelpCircle } from 'lucide-react';
 
 const bookingUrl = 'https://oceanoneroatan.com/rentals/seaturtle-villa';
 const contactUrl = 'https://oceanoneroatan.com/contact';
@@ -9,12 +9,14 @@ const tourUrl = 'https://www.virtuo-reality.com/F14dxmuYqG/44600883p&285.07h&86.
 const googleReviewsUrl = 'https://share.google/0hxN4hYRZ0UWF6eCw';
 const paradiseUrl = 'https://www.paradisehotels.com/';
 const instagramUrl = 'https://www.instagram.com/seaturtlevillaroatan?igsh=MWE5d2hjd3NjYWczaQ==';
+const ownerEmail = 'lampertben@gmail.com';
+const formSubmitUrl = `https://formsubmit.co/${ownerEmail}`;
 
 const villaPhotos = [
   ['Resort pool courtyard', '/images/villa/pool-courtyard-alt.jpg'],
   ['Sea Turtle Villa exterior', '/images/villa/villa-exterior-wide.jpg'],
   ['Open kitchen', '/images/villa/kitchen-wide.jpg'],
-  ['Living & play space', '/images/villa/double-queen-bedroom.jpg'],
+  ['Living & play space', '/images/villa/living-play-space.jpg'],
   ['King bedroom', '/images/villa/king-bedroom-alt.jpg'],
   ['Double queen bedroom', '/images/villa/king-bedroom.jpg'],
   ['Double bedroom mural room', '/images/villa/double-bed-mural.jpg'],
@@ -26,8 +28,17 @@ const highlights = [
   ['Rooftop hot tub & hammocks', Sparkles],
   ['Steps from West Bay beach life', Waves],
   ['Padel & pickleball next door', Sun],
-  ['Fast WiFi + Starlink', ShieldCheck],
+  ['Starlink WiFi 100+ Mbps', Wifi],
   ['Family-ready sleeping layout', BedDouble],
+];
+
+const trustFeatures = [
+  ['Multi-zone A/C', Snowflake, 'Cool, comfortable sleeping and living spaces throughout the villa.'],
+  ['Starlink WiFi', Wifi, 'Typically 100+ Mbps — ideal for remote work, streaming, and family devices.'],
+  ['Gated parking', Car, 'Dedicated parking directly in front of Sea Turtle Villa, inside the gated area.'],
+  ['24/7 security', LockKeyhole, 'Roatan has 24/7 Bulldog security, and safety has not been a guest complaint.'],
+  ['American outlets', Plug, 'Plenty of American-style outlets throughout the villa.'],
+  ['Washer/Dryer', CheckCircle2, 'Convenient in-villa laundry for longer stays and family trips.'],
 ];
 
 const reviews = [
@@ -47,6 +58,39 @@ const reviews = [
 
 const reviewImages = ['img_3057.jpg','img_3058.jpg','img_3059.jpg','img_3060.jpg','img_3061.jpg','img_3062.jpg','img_3063.jpg','img_3064.jpg','img_3065.jpg','img_3066.jpg','img_3067.jpg','img_3068.jpg','img_3069.jpg'];
 
+const faqs = [
+  { category: 'Villa Comfort', q: 'How many guests can Sea Turtle Villa sleep?', a: 'The villa includes one king bedroom with two pack n plays, one bedroom with two queen beds, one smaller bedroom with a double bed, and a queen-size sofa bed. There are four full bathrooms, including three en-suite bathrooms plus one hallway bathroom.' },
+  { category: 'Villa Comfort', q: 'Is there air conditioning?', a: 'Yes. Sea Turtle Villa has multi-zoned A/C so guests can keep the main living areas and bedrooms comfortable throughout their stay.' },
+  { category: 'Villa Comfort', q: 'How fast is the WiFi?', a: 'The villa uses Starlink WiFi and typically sees 100+ Mbps speeds, making it a strong fit for streaming, remote work, video calls, and families with multiple devices.' },
+  { category: 'Villa Comfort', q: 'Is there a washer and dryer?', a: 'Yes. The villa has a washer and dryer, which is especially helpful for longer stays, beach days, and family travel.' },
+  { category: 'Villa Comfort', q: 'Are the outlets American-style?', a: 'Yes. There are lots of American-style power outlets throughout the villa.' },
+  { category: 'Location & Access', q: 'Is there dedicated parking?', a: 'Yes. Sea Turtle Villa has dedicated parking directly in front of the villa, located inside the gated Ocean One area.' },
+  { category: 'Location & Access', q: 'Is the area safe?', a: 'Roatan has 24/7 Bulldog security, and Sea Turtle Villa is inside a gated area. We have not received a single guest complaint about safety.' },
+  { category: 'Location & Access', q: 'Are there grocery stores nearby?', a: 'Yes. There is a grocery option right outside the front door across the street, with additional grocery and convenience options nearby.' },
+  { category: 'Resort Amenities', q: 'Do guests get Paradise Beach Resort amenities?', a: 'Yes. Sea Turtle Villa is part of Ocean One Villas, connected with Paradise Beach Hotel, and guests receive Paradise Beach amenities as part of their stay. Amenities include beach access, pools and tropical gardens, restaurants, bars, live music, massage room, rooftop gym, terrace pool, dive center, tours, and activities.' },
+  { category: 'Resort Amenities', q: 'Is there private beach access?', a: 'Yes. Guests have roped-off/private beach access. Wear your wristband for access to Paradise Beach amenities and beach areas.' },
+  { category: 'Resort Amenities', q: 'What pools can guests use?', a: 'Guests have access to the private Ocean One pool plus the Paradise Beach Resort pool areas.' },
+  { category: 'Resort Amenities', q: 'Are padel and pickleball available nearby?', a: 'Yes. Roatan Padel Club and Roatan Pickleball Club are right next door at Paradise Beach Resort, with two new padel courts and two new pickleball courts. Access details, reservations, and fees should be confirmed locally.' },
+  { category: 'Travel Planning', q: 'Can airport transportation be arranged?', a: 'Yes. Airport transfer can be arranged with Christian by WhatsApp at +504 9840-1482. The guide notes around $40 one way before tip for four or fewer people, with cash preferred and PayPal also an option.' },
+  { category: 'Travel Planning', q: 'Are restaurants nearby?', a: 'Yes. There are many restaurants nearby in the West Bay area, including resort dining and walkable beach restaurants. We plan to add a curated restaurant map and guide as the website evolves.' },
+  { category: 'Travel Planning', q: 'Is snorkeling good nearby?', a: 'Yes. West Bay is widely known as one of Roatan’s best snorkeling areas, with reef access from shore and colorful marine life close to the beach. It is one of the major reasons guests love this part of the island.' },
+  { category: 'Booking', q: 'What is the minimum stay?', a: 'Minimum stay may be as low as one night during low season. During peak season, especially December through April, minimum stays may be higher.' },
+  { category: 'Booking', q: 'What is the cancellation policy?', a: 'We are finalizing the best language for this. Please contact us or check the booking page for the current cancellation policy.' },
+  { category: 'Booking', q: 'What is the check-in process?', a: 'The check-in process is being finalized for the website. Guests generally check in through the Paradise Beach / Ocean One office and receive wristbands for resort amenities.' },
+];
+
+function TurtleMark({ small=false }: { small?: boolean }) {
+  return (
+    <span className={small ? 'turtle-mark small' : 'turtle-mark'} aria-hidden="true">
+      <svg viewBox="0 0 64 64" role="img">
+        <path d="M32 10c10 0 18 8 18 18 0 13-10 23-18 23S14 41 14 28c0-10 8-18 18-18Z" fill="none" stroke="currentColor" strokeWidth="3"/>
+        <path d="M32 10v41M17 25h30M20 38h24M23 15c-7-6-13-5-17 1 5 1 9 5 11 10M41 15c7-6 13-5 17 1-5 1-9 5-11 10M14 35c-7 1-11 6-11 12 7 0 12-3 15-9M50 35c7 1 11 6 11 12-7 0-12-3-15-9" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+        <path d="M28 7c1-4 7-4 8 0" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+      </svg>
+    </span>
+  );
+}
+
 function ButtonLink({ href, children, variant='primary' }: { href: string; children: React.ReactNode; variant?: 'primary'|'secondary'|'light' }) {
   return <a className={`btn ${variant}`} href={href} target="_blank" rel="noreferrer">{children}<ExternalLink size={16}/></a>;
 }
@@ -55,13 +99,42 @@ function SectionHeader({ eyebrow, title, text }: { eyebrow: string; title: strin
   return <div className="section-header"><p className="eyebrow">{eyebrow}</p><h2>{title}</h2>{text && <p>{text}</p>}</div>;
 }
 
+function BookingInquiryForm() {
+  return (
+    <section id="inquiry" className="inquiry-section">
+      <div className="inquiry-copy">
+        <p className="eyebrow">Direct Booking Inquiry</p>
+        <h2>Questions before you book? Send a direct inquiry.</h2>
+        <p>Planning a family stay, longer trip, or special Roatan getaway? Send your preferred dates and questions directly to Ben. You can also check availability through Ocean One and ask for Sea Turtle Villa / Ocean One Villa 3.</p>
+        <div className="inquiry-points">
+          <span><CheckCircle2/> Direct owner response</span>
+          <span><CheckCircle2/> Helpful for longer stays</span>
+          <span><CheckCircle2/> Great for family planning questions</span>
+        </div>
+      </div>
+      <form className="inquiry-card" action={formSubmitUrl} method="POST">
+        <input type="hidden" name="_subject" value="Sea Turtle Villa Direct Booking Inquiry" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <label>Full name<input name="name" required placeholder="Your name" /></label>
+        <label>Email<input type="email" name="email" required placeholder="you@example.com" /></label>
+        <div className="form-row"><label>Arrival<input type="date" name="arrival" /></label><label>Departure<input type="date" name="departure" /></label></div>
+        <div className="form-row"><label>Guests<input type="number" min="1" name="guests" placeholder="4" /></label><label>Trip type<select name="trip_type"><option>Direct booking</option><option>Family vacation</option><option>Longer stay</option><option>Availability question</option><option>Other</option></select></label></div>
+        <label>Message<textarea name="message" rows={5} placeholder="Tell us your dates, questions, or what kind of stay you are planning..." /></label>
+        <button type="submit">Send Inquiry <Mail size={16}/></button>
+        <p className="form-note">First form submission may require email confirmation for security. You can also email {ownerEmail} directly.</p>
+      </form>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <main>
       <nav className="nav">
-        <a className="brand" href="#top"><span>Sea Turtle</span><small>Villa Roatan</small></a>
+        <a className="brand brand-lockup" href="#top"><TurtleMark small/><span>Sea Turtle</span><small>Villa Roatan</small></a>
         <div className="nav-links">
-          <a href="#villa">Villa</a><a href="#tour">3D Tour</a><a href="#amenities">Amenities</a><a href="#reviews">Reviews</a><a href={instagramUrl} target="_blank" rel="noreferrer" className="nav-social"><Camera size={16}/> Instagram</a><a href="#book">Book</a>
+          <a href="#villa">Villa</a><a href="#tour">3D Tour</a><a href="#amenities">Amenities</a><a href="#faq">FAQ</a><a href="#reviews">Reviews</a><a href={instagramUrl} target="_blank" rel="noreferrer" className="nav-social"><Camera size={16}/> Instagram</a><a href="#inquiry">Inquiry</a><a href="#book">Book</a>
         </div>
       </nav>
 
@@ -71,12 +144,13 @@ export default function Home() {
         <motion.div className="hero-copy" initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:.8}}>
           <p className="eyebrow light-text">Ocean One Villa 3 · Roatan, Honduras</p>
           <h1>Private villa comfort. Resort-style Caribbean escape.</h1>
-          <p>Sea Turtle Villa is a tropical-modern Roatan retreat with a rooftop hot tub, resort amenities at Paradise Beach Resort, padel and pickleball next door, and the space families and friends need to fully settle into island life.</p>
-          <div className="hero-actions"><ButtonLink href={bookingUrl}>Book Direct</ButtonLink><ButtonLink href={tourUrl} variant="light">Take the 3D Tour</ButtonLink></div>
+          <p>Sea Turtle Villa is a tropical-modern Roatan retreat with a rooftop hot tub, Paradise Beach Resort amenities, padel and pickleball next door, and the space families and friends need to fully settle into island life.</p>
+          <div className="hero-actions"><ButtonLink href={bookingUrl}>Check Availability</ButtonLink><a className="btn light" href="#inquiry">Send Inquiry</a><ButtonLink href={tourUrl} variant="light">Take the 3D Tour</ButtonLink></div>
         </motion.div>
       </section>
 
-      <section className="intro">
+      <section className="intro brand-watermark">
+        <TurtleMark />
         <div><p className="eyebrow">The Sea Turtle Villa Difference</p><h2>Modern island living, wrapped in the ease of a resort.</h2></div>
         <p>Stay in a spacious private villa while enjoying access to the amenities and energy of Paradise Beach Resort. It is the rare Roatan experience that blends privacy, walkability, family comfort, and resort convenience in one polished setting.</p>
       </section>
@@ -85,6 +159,10 @@ export default function Home() {
         {highlights.map(([label, Icon]: any) => <div className="highlight" key={label}><Icon size={24}/><span>{label}</span></div>)}
       </section>
 
+      <section className="trust-strip">
+        <SectionHeader eyebrow="Travel Confidence" title="The practical comforts guests ask about most." text="Sea Turtle Villa is built for easy international travel: fast WiFi, dedicated parking, gated access, resort amenities, and family-ready convenience." />
+        <div className="trust-grid">{trustFeatures.map(([title, Icon, text]: any) => <article key={title}><Icon/><h3>{title}</h3><p>{text}</p></article>)}</div>
+      </section>
 
       <section className="instagram-preview">
         <div className="instagram-copy">
@@ -116,16 +194,32 @@ export default function Home() {
       <section id="amenities" className="amenities">
         <SectionHeader eyebrow="Included Resort Access" title="Private villa, Paradise Beach Resort amenities." text="Sea Turtle Villa is part of Ocean One Villas, connected with Paradise Beach Resort. Guests enjoy the comfort of a private home base with resort amenities close by." />
         <div className="amenity-cards">
-          <article><Waves/><h3>Beach & Resort</h3><p>Beach access, resort atmosphere, pools, dining, towel access and Paradise Beach Hotel amenities during your stay.</p><ButtonLink href={paradiseUrl} variant="secondary">Paradise Beach Hotel</ButtonLink></article>
+          <article><Waves/><h3>Beach & Resort</h3><p>Roped-off/private beach access, resort pools, tropical gardens, restaurants, bars, live music, terrace pool, spa/massage room, rooftop gym, dive center, tours, and activities.</p><ButtonLink href={paradiseUrl} variant="secondary">Paradise Beach Hotel</ButtonLink></article>
           <article><Dumbbell/><h3>Padel & Pickleball</h3><p>Brand-new Roatan Padel Club and Roatan Pickleball Club courts are next door — a unique active-travel amenity for families and groups.</p></article>
-          <article><MapPin/><h3>West Bay Convenience</h3><p>Walkable access to beach days, restaurants, snorkeling, local shops, resort services, and classic Roatan vacation experiences.</p></article>
+          <article><MapPin/><h3>West Bay Convenience</h3><p>Walkable access to beach days, restaurants, snorkeling, local shops, groceries, resort services, and classic Roatan vacation experiences.</p></article>
         </div>
         <div className="courts-grid"><img src="/images/amenities/courts-01.jpg" alt="Roatan padel court"/><img src="/images/amenities/courts-03.jpg" alt="Roatan pickleball and padel courts"/><img src="/images/amenities/courts-05.jpg" alt="Roatan Padel Club lounge"/><img src="/images/amenities/courts-07.jpg" alt="Roatan pickleball courts at Paradise Beach Resort"/><img src="/images/amenities/courts-10.jpg" alt="Pickleball courts near Sea Turtle Villa"/><img src="/images/amenities/courts-12.jpg" alt="Roatan Pickleball Club courts"/></div>
+      </section>
+
+      <section className="snorkel-section">
+        <div>
+          <p className="eyebrow">Reef & Island Days</p>
+          <h2>West Bay is one of Roatan’s signature snorkeling areas.</h2>
+          <p>Guests love being close to the beach, reef, restaurants, pools, and resort energy. West Bay is widely recognized for shore-access snorkeling, calm-water entry points, and colorful reef experiences close to the sand.</p>
+          <div className="snorkel-links"><a href="https://www.snorkeling-report.com/destination/snorkeling-honduras/" target="_blank" rel="noreferrer">Snorkeling Report guide <ExternalLink size={14}/></a><a href="https://www.islandhouseroatan.com/things-to-do/roatan-snorkeling/" target="_blank" rel="noreferrer">Roatan snorkeling guide <ExternalLink size={14}/></a></div>
+        </div>
+        <img src="/images/villa/pool-courtyard-alt.jpg" alt="Pool courtyard near West Bay beach life" />
       </section>
 
       <section className="gallery">
         <SectionHeader eyebrow="Gallery" title="A villa made for slow mornings, rooftop evenings, and island days." />
         <div className="photo-grid">{villaPhotos.map(([alt, src]) => <figure key={src}><img src={src} alt={alt}/><figcaption>{alt}</figcaption></figure>)}</div>
+      </section>
+
+      <section id="faq" className="faq-section">
+        <SectionHeader eyebrow="FAQ" title="Helpful answers before your Roatan stay." text="A growing collection of answers for families, first-time Roatan travelers, remote workers, and guests comparing villa and resort-style stays." />
+        <div className="faq-grid">{faqs.map(item => <details key={item.q}><summary><span>{item.category}</span>{item.q}</summary><p>{item.a}</p></details>)}</div>
+        <p className="faq-note"><HelpCircle size={18}/> Coming soon: cancellation policy and finalized check-in process language.</p>
       </section>
 
       <section id="reviews" className="reviews">
@@ -140,14 +234,16 @@ export default function Home() {
         <div className="experience-list"><span><Anchor/> Snorkeling & diving</span><span><Sun/> Rooftop hot tub evenings</span><span><Camera/> 3D tour confidence</span><span><Heart/> Family reunions & repeat stays</span><span><MessageCircle/> Direct booking support</span><span><CalendarDays/> Longer-stay friendly</span></div>
       </section>
 
+      <BookingInquiryForm />
+
       <section id="book" className="booking">
         <p className="eyebrow light-text">Book Sea Turtle Villa</p>
         <h2>Your Roatan escape starts here.</h2>
-        <p>Book through Ocean One and ask for <strong>Sea Turtle Villa / Ocean One Villa 3</strong>. Direct booking is the best path for personal service and future repeat-guest offers.</p>
-        <div className="hero-actions"><ButtonLink href={bookingUrl}>Check Availability</ButtonLink><ButtonLink href={contactUrl} variant="light">Contact Ocean One</ButtonLink><ButtonLink href={instagramUrl} variant="light">Follow on Instagram</ButtonLink></div>
+        <p>Book through Ocean One and ask for <strong>Sea Turtle Villa / Ocean One Villa 3</strong>. You can also send a direct inquiry to Ben for questions before booking.</p>
+        <div className="hero-actions"><ButtonLink href={bookingUrl}>Check Availability</ButtonLink><a className="btn light" href="#inquiry">Send Inquiry</a><ButtonLink href={contactUrl} variant="light">Contact Ocean One</ButtonLink></div>
       </section>
 
-      <footer><div><strong>Sea Turtle Villa Roatan</strong><p>Ocean One Villa 3 · Roatan, Honduras</p></div><div><a href={bookingUrl}>Book</a><a href={tourUrl}>3D Tour</a><a href={googleReviewsUrl}>Reviews</a><a href={instagramUrl} target="_blank" rel="noreferrer">Instagram</a></div></footer>
+      <footer><div><div className="footer-brand"><TurtleMark small/><strong>Sea Turtle Villa Roatan</strong></div><p>Ocean One Villa 3 · Roatan, Honduras</p></div><div><a href={bookingUrl}>Book</a><a href={tourUrl}>3D Tour</a><a href={googleReviewsUrl}>Reviews</a><a href={instagramUrl} target="_blank" rel="noreferrer">Instagram</a></div></footer>
     </main>
   );
 }
