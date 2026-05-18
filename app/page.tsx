@@ -164,6 +164,47 @@ export default function Home() {
         <div className="trust-grid">{trustFeatures.map(([title, Icon, text]: any) => <article key={title}><Icon/><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
 
+      <section className="signature-section">
+        <SectionHeader eyebrow="Why Guests Choose Sea Turtle Villa" title="A different kind of Roatan stay." text="Sea Turtle Villa blends the comfort of a private villa with the energy and amenities of a walkable Caribbean resort destination. Guests can wake up slowly with coffee on the rooftop, snorkel the reef before lunch, play pickleball or padel next door, walk to dinner on the beach, and end the evening in the hot tub under island skies." />
+        <div className="signature-grid">
+          <article><Heart/><h3>Private villa comfort</h3><p>Spread out with multiple bedrooms, family-ready spaces, a full kitchen, rooftop lounge areas, and the flexibility that makes longer stays feel easy.</p></article>
+          <article><Palmtree/><h3>Resort-style access</h3><p>Guests enjoy Paradise Beach amenities including pools, tropical grounds, beach access, restaurants, bars, and a true Caribbean resort atmosphere.</p></article>
+          <article><MapPin/><h3>Walkable West Bay lifestyle</h3><p>Few Roatan locations combine walkability, beach access, dining, groceries, snorkeling, fitness, and resort amenities this seamlessly.</p></article>
+        </div>
+      </section>
+
+      <section className="lifestyle-section">
+        <div className="lifestyle-copy">
+          <p className="eyebrow">Active Island Living</p>
+          <h2>Move through your Roatan days without needing to plan every moment.</h2>
+          <p>One of the biggest differentiators at Sea Turtle Villa is how naturally the location supports an active, relaxed island lifestyle. Walk to the beach in minutes. Grab smoothies or groceries across the street. Play pickleball or padel next door. Book a dive excursion, snorkel the reef, or take a sunset beach walk — all without constantly arranging transportation.</p>
+          <p>The nearby Roatan Athletic Club at Infinity Bay adds another premium amenity for guests who like to stay active while traveling, with gym access just about a block away from the villa.</p>
+          <a className="instagram-link" href="https://www.infinitybay.com/explore/roatan-athletic-club" target="_blank" rel="noreferrer"><Dumbbell size={18}/> Explore Roatan Athletic Club</a>
+        </div>
+        <div className="lifestyle-points">
+          <span><CheckCircle2/> Walkable restaurants & beach bars</span>
+          <span><CheckCircle2/> Grocery directly across the street</span>
+          <span><CheckCircle2/> Pickleball & padel next door</span>
+          <span><CheckCircle2/> Snorkeling & diving nearby</span>
+          <span><CheckCircle2/> Rooftop recovery & relaxation</span>
+          <span><CheckCircle2/> Beach, pool, fitness, and dining access</span>
+        </div>
+      </section>
+
+      <section className="arrival-section">
+        <div className="arrival-card">
+          <p className="eyebrow">Arrival Made Easy</p>
+          <h2>From airport pickup to rooftop sunset — the experience is designed to feel easy.</h2>
+          <p>Many guests are visiting Roatan for the first time, so we try to simplify the arrival process as much as possible. We recommend our trusted local driver Christian, who meets guests just outside customs and brings them directly to Sea Turtle Villa in West Bay.</p>
+          <p>Once you arrive, much of your stay becomes walkable — beach days, groceries, restaurants, snorkeling, padel, pickleball, resort pools, and sunset dinners are all nearby.</p>
+          <div className="arrival-points">
+            <span><CheckCircle2/> Airport pickup coordination available</span>
+            <span><CheckCircle2/> Trusted local transportation contact</span>
+            <span><CheckCircle2/> Easier first-time Roatan arrival</span>
+          </div>
+        </div>
+      </section>
+
       <section className="instagram-preview">
         <div className="instagram-copy">
           <p className="eyebrow">Follow Along</p>
