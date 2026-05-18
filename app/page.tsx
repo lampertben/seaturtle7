@@ -11,7 +11,7 @@ const googleReviewsUrl = 'https://share.google/0hxN4hYRZ0UWF6eCw';
 const paradiseUrl = 'https://www.paradisehotels.com/';
 const instagramUrl = 'https://www.instagram.com/seaturtlevillaroatan?igsh=MWE5d2hjd3NjYWczaQ==';
 const ownerEmail = 'seaturtlevillaroatan@gmail.com';
-const formSubmitUrl = `https://formsubmit.co/ajax/${ownerEmail}`;
+const formspreeUrl = 'https://formspree.io/f/mredgwoa';
 
 const villaPhotos = [
   ['Resort pool courtyard', '/images/villa/pool-courtyard-alt.jpg'],
@@ -140,10 +140,7 @@ function BookingInquiryForm() {
 
     try {
       const payload = new FormData();
-      payload.append('_subject', 'Sea Turtle Villa Direct Booking Inquiry');
-      payload.append('_template', 'table');
-      payload.append('_captcha', 'false');
-      payload.append('_replyto', data.email || '');
+      payload.append('subject', 'Sea Turtle Villa Direct Booking Inquiry');
       payload.append('Property', 'Sea Turtle Villa / Ocean One Villa 3');
       payload.append('Name', data.name || '');
       payload.append('Email', data.email || '');
@@ -155,13 +152,13 @@ function BookingInquiryForm() {
       payload.append('Message', data.message || '');
       payload.append('Source', 'seaturtlevillaroatan.com inquiry form');
 
-      const response = await fetch(formSubmitUrl, {
+      const response = await fetch(formspreeUrl, {
         method: 'POST',
         headers: { Accept: 'application/json' },
         body: payload,
       });
 
-      if (!response.ok) throw new Error('FormSubmit request failed');
+      if (!response.ok) throw new Error('Formspree request failed');
       setStatus('success');
       form.reset();
     } catch (error) {
@@ -190,8 +187,8 @@ function BookingInquiryForm() {
         <label>Message<textarea name="message" rows={5} placeholder="Tell us your dates, questions, or what kind of stay you are planning..." /></label>
         <button type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Sending...' : 'Send Inquiry'} <Mail size={16}/></button>
         {status === 'success' && <p className="form-success">Thank you — your inquiry was sent. Ben will follow up by email.</p>}
-        {status === 'fallback' && <p className="form-warning">The secure form service did not complete the send. This can happen before the new inbox is confirmed with FormSubmit. Please <a href={mailtoHref}>send this inquiry by email</a> or email {ownerEmail} directly.</p>}
-        <p className="form-note">This form sends directly to {ownerEmail}. If the secure form service is unavailable, guests can still use the email fallback.</p>
+        {status === 'fallback' && <p className="form-warning">The inquiry form did not complete the send. Please <a href={mailtoHref}>send this inquiry by email</a> or email {ownerEmail} directly.</p>}
+        <p className="form-note">This form sends directly to {ownerEmail}. Guests can also email this address directly anytime.</p>
       </form>
     </section>
   );
