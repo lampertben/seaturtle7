@@ -139,27 +139,26 @@ function BookingInquiryForm() {
     setMailtoHref(mailto);
 
     try {
+      const payload = new FormData();
+      payload.append('_subject', 'Sea Turtle Villa Direct Booking Inquiry');
+      payload.append('_template', 'table');
+      payload.append('_captcha', 'false');
+      payload.append('_replyto', data.email || '');
+      payload.append('Property', 'Sea Turtle Villa / Ocean One Villa 3');
+      payload.append('Name', data.name || '');
+      payload.append('Email', data.email || '');
+      payload.append('Phone / WhatsApp', data.phone || '');
+      payload.append('Arrival', data.arrival || '');
+      payload.append('Departure', data.departure || '');
+      payload.append('Guests', data.guests || '');
+      payload.append('Trip type', data.trip_type || '');
+      payload.append('Message', data.message || '');
+      payload.append('Source', 'seaturtlevillaroatan.com inquiry form');
+
       const response = await fetch(formSubmitUrl, {
         method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          _subject: 'Sea Turtle Villa Direct Booking Inquiry',
-          _template: 'table',
-          _captcha: 'false',
-          _replyto: data.email,
-          property: 'Sea Turtle Villa / Ocean One Villa 3',
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
-          arrival: data.arrival,
-          departure: data.departure,
-          guests: data.guests,
-          trip_type: data.trip_type,
-          message: data.message,
-        }),
+        headers: { Accept: 'application/json' },
+        body: payload,
       });
 
       if (!response.ok) throw new Error('FormSubmit request failed');
@@ -191,8 +190,8 @@ function BookingInquiryForm() {
         <label>Message<textarea name="message" rows={5} placeholder="Tell us your dates, questions, or what kind of stay you are planning..." /></label>
         <button type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Sending...' : 'Send Inquiry'} <Mail size={16}/></button>
         {status === 'success' && <p className="form-success">Thank you — your inquiry was sent. Ben will follow up by email.</p>}
-        {status === 'fallback' && <p className="form-warning">The secure form service did not complete the send. Please <a href={mailtoHref}>send this inquiry by email</a> or email {ownerEmail} directly.</p>}
-        <p className="form-note">This form sends directly to {ownerEmail}. If the form service is unavailable, the email fallback keeps guests from landing on a third-party error page.</p>
+        {status === 'fallback' && <p className="form-warning">The secure form service did not complete the send. This can happen before the new inbox is confirmed with FormSubmit. Please <a href={mailtoHref}>send this inquiry by email</a> or email {ownerEmail} directly.</p>}
+        <p className="form-note">This form sends directly to {ownerEmail}. If the secure form service is unavailable, guests can still use the email fallback.</p>
       </form>
     </section>
   );
