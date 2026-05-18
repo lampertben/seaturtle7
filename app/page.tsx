@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, type FormEvent, type ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { Anchor, BedDouble, CalendarDays, Camera, CheckCircle2, Dumbbell, ExternalLink, Heart, Mail, MapPin, MessageCircle, Palmtree, ShieldCheck, Sparkles, Star, Sun, Waves, Wifi, Car, Snowflake, LockKeyhole, Plug, Utensils, HelpCircle } from 'lucide-react';
 
@@ -9,8 +10,8 @@ const tourUrl = 'https://www.virtuo-reality.com/F14dxmuYqG/44600883p&285.07h&86.
 const googleReviewsUrl = 'https://share.google/0hxN4hYRZ0UWF6eCw';
 const paradiseUrl = 'https://www.paradisehotels.com/';
 const instagramUrl = 'https://www.instagram.com/seaturtlevillaroatan?igsh=MWE5d2hjd3NjYWczaQ==';
-const ownerEmail = 'lampertben@gmail.com';
-const formSubmitUrl = `https://formsubmit.co/${ownerEmail}`;
+const ownerEmail = 'seaturtlevillaroatan@gmail.com';
+const formSubmitUrl = `https://formsubmit.co/ajax/${ownerEmail}`;
 
 const villaPhotos = [
   ['Resort pool courtyard', '/images/villa/pool-courtyard-alt.jpg'],
@@ -95,7 +96,7 @@ function TurtleMark({ small=false }: { small?: boolean }) {
   );
 }
 
-function ButtonLink({ href, children, variant='primary' }: { href: string; children: React.ReactNode; variant?: 'primary'|'secondary'|'light' }) {
+function ButtonLink({ href, children, variant='primary' }: { href: string; children: ReactNode; variant?: 'primary'|'secondary'|'light' }) {
   return <a className={`btn ${variant}`} href={href} target="_blank" rel="noreferrer">{children}<ExternalLink size={16}/></a>;
 }
 
@@ -104,29 +105,94 @@ function SectionHeader({ eyebrow, title, text }: { eyebrow: string; title: strin
 }
 
 function BookingInquiryForm() {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'fallback'>('idle');
+  const [mailtoHref, setMailtoHref] = useState(`mailto:${ownerEmail}`);
+
+  const buildEmailBody = (data: Record<string, string>) => {
+    return [
+      'Sea Turtle Villa Direct Booking Inquiry',
+      '',
+      `Name: ${data.name || ''}`,
+      `Email: ${data.email || ''}`,
+      `Phone: ${data.phone || ''}`,
+      `Arrival: ${data.arrival || ''}`,
+      `Departure: ${data.departure || ''}`,
+      `Guests: ${data.guests || ''}`,
+      `Trip type: ${data.trip_type || ''}`,
+      '',
+      'Message:',
+      data.message || '',
+      '',
+      'Source: seaturtlevillaroatan.com inquiry form',
+    ].join('\n');
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus('sending');
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()) as Record<string, string>;
+    const body = buildEmailBody(data);
+    const mailto = `mailto:${ownerEmail}?subject=${encodeURIComponent('Sea Turtle Villa Direct Booking Inquiry')}&body=${encodeURIComponent(body)}`;
+    setMailtoHref(mailto);
+
+    try {
+      const response = await fetch(formSubmitUrl, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          _subject: 'Sea Turtle Villa Direct Booking Inquiry',
+          _template: 'table',
+          _captcha: 'false',
+          _replyto: data.email,
+          property: 'Sea Turtle Villa / Ocean One Villa 3',
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          arrival: data.arrival,
+          departure: data.departure,
+          guests: data.guests,
+          trip_type: data.trip_type,
+          message: data.message,
+        }),
+      });
+
+      if (!response.ok) throw new Error('FormSubmit request failed');
+      setStatus('success');
+      form.reset();
+    } catch (error) {
+      setStatus('fallback');
+    }
+  };
+
   return (
     <section id="inquiry" className="inquiry-section">
       <div className="inquiry-copy">
         <p className="eyebrow">Direct Booking Inquiry</p>
         <h2>Questions before you book? Send a direct inquiry.</h2>
-        <p>Planning a family stay, longer trip, or special Roatan getaway? Send your preferred dates and questions directly to Ben. You can also check availability through Ocean One and ask for Sea Turtle Villa / Ocean One Villa 3.</p>
+        <p>Ask about dates, family setup, transportation, resort access, longer stays, or anything else that would help you feel confident before booking Sea Turtle Villa.</p>
         <div className="inquiry-points">
-          <span><CheckCircle2/> Direct owner response</span>
-          <span><CheckCircle2/> Helpful for longer stays</span>
-          <span><CheckCircle2/> Great for family planning questions</span>
+          <span><Mail size={16}/> Goes to Ben directly</span>
+          <span><CalendarDays size={16}/> Best for availability questions</span>
+          <span><MessageCircle size={16}/> Helpful before booking with Ocean One</span>
         </div>
       </div>
-      <form className="inquiry-card" action={formSubmitUrl} method="POST">
-        <input type="hidden" name="_subject" value="Sea Turtle Villa Direct Booking Inquiry" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_template" value="table" />
+      <form className="inquiry-card" onSubmit={handleSubmit}>
         <label>Full name<input name="name" required placeholder="Your name" /></label>
         <label>Email<input type="email" name="email" required placeholder="you@example.com" /></label>
+        <label>Phone / WhatsApp optional<input name="phone" placeholder="Optional" /></label>
         <div className="form-row"><label>Arrival<input type="date" name="arrival" /></label><label>Departure<input type="date" name="departure" /></label></div>
-        <div className="form-row"><label>Guests<input type="number" min="1" name="guests" placeholder="4" /></label><label>Trip type<select name="trip_type"><option>Direct booking</option><option>Family vacation</option><option>Longer stay</option><option>Availability question</option><option>Other</option></select></label></div>
+        <div className="form-row"><label>Guests<input type="number" min="1" name="guests" placeholder="4" /></label><label>Trip type<select name="trip_type" defaultValue="Direct booking"><option>Direct booking</option><option>Family vacation</option><option>Longer stay</option><option>Availability question</option><option>Other</option></select></label></div>
         <label>Message<textarea name="message" rows={5} placeholder="Tell us your dates, questions, or what kind of stay you are planning..." /></label>
-        <button type="submit">Send Inquiry <Mail size={16}/></button>
-        <p className="form-note">First form submission may require email confirmation for security. You can also email {ownerEmail} directly.</p>
+        <button type="submit" disabled={status === 'sending'}>{status === 'sending' ? 'Sending...' : 'Send Inquiry'} <Mail size={16}/></button>
+        {status === 'success' && <p className="form-success">Thank you — your inquiry was sent. Ben will follow up by email.</p>}
+        {status === 'fallback' && <p className="form-warning">The secure form service did not complete the send. Please <a href={mailtoHref}>send this inquiry by email</a> or email {ownerEmail} directly.</p>}
+        <p className="form-note">This form sends directly to {ownerEmail}. If the form service is unavailable, the email fallback keeps guests from landing on a third-party error page.</p>
       </form>
     </section>
   );
