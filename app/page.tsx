@@ -59,6 +59,10 @@ const reviews = [
 const reviewImages = ['img_3057.jpg','img_3058.jpg','img_3059.jpg','img_3060.jpg','img_3061.jpg','img_3062.jpg','img_3063.jpg','img_3064.jpg','img_3065.jpg','img_3066.jpg','img_3067.jpg','img_3068.jpg','img_3069.jpg'];
 
 const faqs = [
+  { category: 'Why Guests Choose Sea Turtle Villa', q: 'What makes Sea Turtle Villa different from other Roatan vacation rentals?', a: 'Sea Turtle Villa combines the comfort and privacy of a standalone villa with access to Paradise Beach Resort amenities, creating a rare “private villa + resort access” experience in one of the most walkable areas of West Bay. Guests love the balance of beach access, pools, restaurants, active lifestyle amenities, rooftop relaxation, and family-friendly comfort.' },
+  { category: 'Walkable West Bay Lifestyle', q: 'What can guests walk to from the villa?', a: 'One of Sea Turtle Villa’s biggest advantages is its highly walkable location. Guests can walk to West Bay Beach, restaurants, beach bars, snorkeling access points, grocery options, Paradise Beach amenities, Roatan Pickleball Club, Roatan Padel Club, Infinity Bay, and the Roatan Athletic Club gym.' },
+  { category: 'Active Island Living', q: 'Is Sea Turtle Villa a good fit for active travelers?', a: 'Yes. Sea Turtle Villa is ideal for guests who want more than just a beach stay. Guests can enjoy nearby pickleball and padel courts, snorkeling, diving, beach walks, gym access at the Roatan Athletic Club at Infinity Bay, rooftop hot tub evenings, and easy walkability throughout West Bay.' },
+  { category: 'Travel Planning', q: 'How does airport transportation work?', a: 'Many guests choose to arrange airport transportation with our recommended local driver, Christian. He typically meets guests just outside customs and provides a simple, stress-free ride directly to Sea Turtle Villa, helping make arrival in Roatan feel easy from the beginning of the trip.' },
   { category: 'Villa Comfort', q: 'How many guests can Sea Turtle Villa sleep?', a: 'The villa includes one king bedroom with two pack n plays, one bedroom with two queen beds, one smaller bedroom with a double bed, and a queen-size sofa bed. There are four full bathrooms, including three en-suite bathrooms plus one hallway bathroom.' },
   { category: 'Villa Comfort', q: 'Is there air conditioning?', a: 'Yes. Sea Turtle Villa has multi-zoned A/C so guests can keep the main living areas and bedrooms comfortable throughout their stay.' },
   { category: 'Villa Comfort', q: 'How fast is the WiFi?', a: 'The villa uses Starlink WiFi and typically sees 100+ Mbps speeds, making it a strong fit for streaming, remote work, video calls, and families with multiple devices.' },
@@ -162,80 +166,6 @@ export default function Home() {
       <section className="trust-strip">
         <SectionHeader eyebrow="Travel Confidence" title="The practical comforts guests ask about most." text="Sea Turtle Villa is built for easy international travel: fast WiFi, dedicated parking, gated access, resort amenities, and family-ready convenience." />
         <div className="trust-grid">{trustFeatures.map(([title, Icon, text]: any) => <article key={title}><Icon/><h3>{title}</h3><p>{text}</p></article>)}</div>
-      </section>
-
-      <section className="signature-section elevated-band">
-        <div className="section-kicker-row">
-          <span className="line" />
-          <p className="eyebrow">Why Guests Choose Sea Turtle Villa</p>
-          <span className="line" />
-        </div>
-        <div className="signature-hero">
-          <div>
-            <h2>A private villa stay with the rhythm of a resort vacation.</h2>
-            <p>Sea Turtle Villa is designed for guests who want more than a place to sleep. It gives families and friends the space of a private home, the polish of a resort setting, and one of the easiest walkable locations in West Bay.</p>
-          </div>
-          <div className="signature-quote-card">
-            <Star />
-            <p>Wake up with coffee on the rooftop, walk to the beach, snorkel the reef, play pickleball or padel next door, and end the evening in the hot tub under the Roatan sky.</p>
-          </div>
-        </div>
-        <div className="signature-grid premium-cards">
-          <article><Heart/><span className="card-number">01</span><h3>Private villa comfort</h3><p>Multiple bedrooms, four full bathrooms, a full kitchen, laundry, rooftop lounge spaces, hammocks, and a family-friendly layout make the villa feel calm, spacious, and easy to settle into.</p></article>
-          <article><Palmtree/><span className="card-number">02</span><h3>Resort-style access</h3><p>Enjoy the private feel of Ocean One Villas while staying connected to Paradise Beach amenities, including beach access, pools, tropical grounds, restaurants, bars, and a classic Caribbean resort atmosphere.</p></article>
-          <article><MapPin/><span className="card-number">03</span><h3>Walkable West Bay lifestyle</h3><p>Beach days, groceries, restaurants, snorkeling, fitness, padel, pickleball, resort pools, and sunset dinners are all close by — a major advantage for families and first-time Roatan guests.</p></article>
-        </div>
-      </section>
-
-      <section className="west-bay-section">
-        <div className="west-bay-panel">
-          <div className="west-bay-copy">
-            <p className="eyebrow">Walkable West Bay Lifestyle</p>
-            <h2>The luxury here is how effortless the day feels.</h2>
-            <p>At many island rentals, every outing requires a plan. At Sea Turtle Villa, the best parts of West Bay are woven into the day: coffee on the rooftop, a beach walk after breakfast, a quick grocery run across the street, pool time, snorkeling, dinner on the sand, and a quiet walk back home.</p>
-            <p>This is the rare Roatan location where guests can enjoy a private villa without feeling tucked away from the energy, convenience, and beauty that make West Bay special.</p>
-          </div>
-          <div className="walkability-map-card">
-            <span><Waves/> Beach & reef</span>
-            <span><Utensils/> Restaurants & bars</span>
-            <span><Dumbbell/> Gym nearby</span>
-            <span><Sun/> Padel & pickleball</span>
-            <span><CheckCircle2/> Grocery across street</span>
-            <span><Palmtree/> Resort pools</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="lifestyle-section lifestyle-luxury">
-        <div className="lifestyle-copy">
-          <p className="eyebrow">Active Island Living</p>
-          <h2>Beach, reef, courts, gym, pool, rooftop — all in one vacation rhythm.</h2>
-          <p>Sea Turtle Villa works especially well for guests who like a vacation with options. Start with a beach walk or a snorkel, play padel or pickleball next door, visit the nearby Roatan Athletic Club at Infinity Bay, then come back to the villa for a rooftop soak and hammock time.</p>
-          <p>The result is a stay that feels active without being over-scheduled — perfect for families, couples, and groups who want both adventure and downtime.</p>
-          <a className="instagram-link" href="https://www.infinitybay.com/explore/roatan-athletic-club" target="_blank" rel="noreferrer"><Dumbbell size={18}/> Explore Roatan Athletic Club</a>
-        </div>
-        <div className="active-card-grid">
-          <article><Waves/><h3>Water</h3><p>Snorkeling, beach walks, diving excursions, pool time, and easy access to the reef and resort beach scene.</p></article>
-          <article><Sun/><h3>Courts</h3><p>Roatan Padel Club and Roatan Pickleball Club are right next door with new courts and a social resort feel.</p></article>
-          <article><Dumbbell/><h3>Fitness</h3><p>Roatan Athletic Club at Infinity Bay is about a block away for guests who want gym access during their stay.</p></article>
-          <article><Sparkles/><h3>Recovery</h3><p>Return to the rooftop hot tub, hammocks, A/C, Starlink WiFi, and quiet villa comfort after full island days.</p></article>
-        </div>
-      </section>
-
-      <section className="arrival-section arrival-luxury">
-        <div className="arrival-card">
-          <div className="arrival-main">
-            <p className="eyebrow">Arrival Made Easy</p>
-            <h2>From airport pickup to rooftop sunset, your first day can feel simple.</h2>
-            <p>Many guests are visiting Roatan for the first time, so the arrival experience matters. We recommend our trusted local driver Christian, who can meet guests just outside customs and bring them directly to Sea Turtle Villa in West Bay.</p>
-            <p>Once you arrive, the location starts doing the work: beach, groceries, restaurants, snorkeling, resort pools, padel, pickleball, and sunset dinners are all nearby.</p>
-          </div>
-          <div className="arrival-steps">
-            <span><strong>01</strong><em>Land in Roatan</em>Meet your driver just outside customs.</span>
-            <span><strong>02</strong><em>Easy transfer</em>Head straight to West Bay and Ocean One Villas.</span>
-            <span><strong>03</strong><em>Settle in</em>Drop bags, explore the villa, and start your resort-style stay.</span>
-          </div>
-        </div>
       </section>
 
       <section className="instagram-preview">
