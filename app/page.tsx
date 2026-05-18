@@ -80,7 +80,7 @@ const faqs = [
   { category: 'Travel Planning', q: 'Are restaurants nearby?', a: 'Yes. There are many restaurants nearby in the West Bay area, including resort dining and walkable beach restaurants. We plan to add a curated restaurant map and guide as the website evolves.' },
   { category: 'Travel Planning', q: 'Is snorkeling good nearby?', a: 'Yes. West Bay is widely known as one of Roatan’s best snorkeling areas, with reef access from shore and colorful marine life close to the beach. It is one of the major reasons guests love this part of the island.' },
   { category: 'Booking', q: 'What is the minimum stay?', a: 'Minimum stay may be as low as one night during low season. During peak season, especially December through April, minimum stays may be higher.' },
-  { category: 'Booking', q: 'What is the cancellation policy?', a: 'We are finalizing the best language for this. Please contact us or check the booking page for the current cancellation policy.' },
+  { category: 'Booking', q: 'What is the cancellation policy for direct bookings?', a: 'For direct bookings at Sea Turtle Villa, payments are generally flexible and can be applied toward a future stay if plans change. If you cancel after payment, your reservation amount may be kept as credit toward a future stay within 12 months of the original reservation date. For cancellations made within 14 days of arrival during low or mid season, or within 45 days of arrival during high season, the cost of one night will be charged; any remaining balance can still be used as future-stay credit within 12 months at the applicable seasonal rate. No-shows are charged the full reservation amount regardless of season. For questions or special circumstances, please contact us directly at seaturtlevillaroatan@gmail.com.' },
   { category: 'Booking', q: 'What is the check-in process?', a: 'The check-in process is being finalized for the website. Guests generally check in through the Paradise Beach / Ocean One office and receive wristbands for resort amenities.' },
 ];
 
@@ -215,6 +215,11 @@ export default function Home() {
         </motion.div>
       </section>
 
+      <section className="gallery elevated-gallery">
+        <SectionHeader eyebrow="Visual Tour" title="A first look at island living, Sea Turtle Villa style." text="From rooftop evenings and poolside mornings to bright family spaces and walkable West Bay days, the gallery brings the stay into focus early in the experience." />
+        <div className="photo-grid story-photo-grid">{villaPhotos.map(([alt, src], index) => <figure className={index < 2 ? 'featured-photo' : ''} key={src}><img src={src} alt={alt}/><figcaption>{alt}</figcaption></figure>)}</div>
+      </section>
+
       <section className="intro brand-watermark">
         <TurtleMark />
         <div><p className="eyebrow">The Sea Turtle Villa Difference</p><h2>Modern island living, wrapped in the ease of a resort.</h2></div>
@@ -277,15 +282,10 @@ export default function Home() {
         <img src="/images/villa/pool-courtyard-alt.jpg" alt="Pool courtyard near West Bay beach life" />
       </section>
 
-      <section className="gallery">
-        <SectionHeader eyebrow="Gallery" title="A villa made for slow mornings, rooftop evenings, and island days." />
-        <div className="photo-grid">{villaPhotos.map(([alt, src]) => <figure key={src}><img src={src} alt={alt}/><figcaption>{alt}</figcaption></figure>)}</div>
-      </section>
-
       <section id="faq" className="faq-section">
         <SectionHeader eyebrow="FAQ" title="Helpful answers before your Roatan stay." text="A growing collection of answers for families, first-time Roatan travelers, remote workers, and guests comparing villa and resort-style stays." />
         <div className="faq-grid">{faqs.map(item => <details key={item.q}><summary><span>{item.category}</span>{item.q}</summary><p>{item.a}</p></details>)}</div>
-        <p className="faq-note"><HelpCircle size={18}/> Coming soon: cancellation policy and finalized check-in process language.</p>
+        <p className="faq-note"><HelpCircle size={18}/> Questions about direct booking, dates, or special circumstances? Email seaturtlevillaroatan@gmail.com anytime.</p>
       </section>
 
       <section id="reviews" className="reviews">
