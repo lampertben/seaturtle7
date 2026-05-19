@@ -11,3 +11,24 @@
 
 /* Update 14: higher, more editorial gallery placement */
 .elevated-gallery{background:linear-gradient(180deg,#fffaf2 0%,#f7efe3 100%);padding-top:86px;padding-bottom:92px}.elevated-gallery .section-header{max-width:940px;margin-bottom:38px}.story-photo-grid{grid-template-columns:1.15fr 1.15fr 1fr 1fr;align-items:stretch}.story-photo-grid figure{box-shadow:0 18px 55px rgba(23,52,49,.10)}.story-photo-grid .featured-photo{grid-row:span 2}.story-photo-grid .featured-photo img{height:614px}.story-photo-grid figure:not(.featured-photo) img{height:300px}.story-photo-grid figcaption{backdrop-filter:blur(10px);box-shadow:0 8px 24px rgba(23,52,49,.08)}@media(max-width:1100px){.story-photo-grid{grid-template-columns:1fr 1fr}.story-photo-grid .featured-photo img{height:420px}.story-photo-grid figure:not(.featured-photo) img{height:260px}}@media(max-width:560px){.elevated-gallery{padding-top:64px;padding-bottom:70px}.story-photo-grid{grid-template-columns:1fr}.story-photo-grid .featured-photo{grid-row:auto}.story-photo-grid .featured-photo img,.story-photo-grid figure:not(.featured-photo) img{height:250px}}
+
+
+/* Update 15: brighter villa-forward hero with cleaner mobile readability */
+.hero>img.hero-image{object-position:center center}
+.hero-copy{max-width:720px}
+.hero-copy p:not(.eyebrow){max-width:610px}
+@media(max-width:760px){
+  .hero{min-height:92svh;align-items:flex-end}
+  .hero>img.hero-image{object-position:58% center}
+  .overlay{background:linear-gradient(180deg,rgba(3,22,20,.10) 0%,rgba(3,22,20,.28) 38%,rgba(3,22,20,.82) 100%),linear-gradient(90deg,rgba(3,22,20,.48),rgba(3,22,20,.10) 54%,rgba(3,22,20,.06))}
+  .hero-copy{width:100%;padding:0 6vw 7vh}
+  .hero h1{font-size:clamp(38px,11vw,52px);line-height:1.02;margin:10px 0 16px}
+  .hero p{font-size:16px;line-height:1.48;max-width:34rem}
+  .hero-actions{gap:10px;margin-top:22px}
+}
+@media(max-width:420px){
+  .hero>img.hero-image{object-position:62% center}
+  .hero-copy{padding-bottom:6vh}
+  .hero h1{font-size:36px}
+  .hero-actions .btn{padding:13px 18px}
+}

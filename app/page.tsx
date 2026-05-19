@@ -205,12 +205,12 @@ export default function Home() {
       </nav>
 
       <section id="top" className="hero">
-        <img src="/images/villa/rooftop-night.jpg" alt="Rooftop hot tub and hammock at Sea Turtle Villa Roatan" />
+        <img className="hero-image" src="/images/villa/villa-exterior-wide.jpg" alt="Sea Turtle Villa exterior with palm trees in Roatan" />
         <div className="overlay" />
         <motion.div className="hero-copy" initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:.8}}>
           <p className="eyebrow light-text">Ocean One Villa 3 · Roatan, Honduras</p>
-          <h1>Private villa comfort. Resort-style Caribbean escape.</h1>
-          <p>Sea Turtle Villa is a tropical-modern Roatan retreat with a rooftop hot tub, Paradise Beach Resort amenities, padel and pickleball next door, and the space families and friends need to fully settle into island life.</p>
+          <h1>Walkable West Bay villa with resort-style Caribbean ease.</h1>
+          <p>Private villa comfort, Paradise Beach amenities, rooftop relaxation, and the best of West Bay within easy reach.</p>
           <div className="hero-actions"><ButtonLink href={bookingUrl}>Check Availability</ButtonLink><a className="btn light" href="#inquiry">Send Inquiry</a><ButtonLink href={tourUrl} variant="light">Take the 3D Tour</ButtonLink></div>
         </motion.div>
       </section>
