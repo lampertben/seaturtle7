@@ -15,7 +15,7 @@ const formspreeUrl = 'https://formspree.io/f/mredgwoa';
 
 const villaPhotos = [
   ['Resort pool courtyard', '/images/villa/pool-courtyard-alt.jpg'],
-  ['Sea Turtle Villa exterior', '/images/villa/villa-exterior-wide.jpg'],
+  ['Sea Turtle Villa exterior', '/images/villa/villa-exterior-sun.jpg'],
   ['Open kitchen', '/images/villa/kitchen-wide.jpg'],
   ['Living & play space', '/images/villa/living-play-space.jpg'],
   ['King bedroom', '/images/villa/king-bedroom-alt.jpg'],
@@ -59,7 +59,9 @@ const reviews = [
 
 const reviewImages = ['img_3057.jpg','img_3058.jpg','img_3059.jpg','img_3060.jpg','img_3061.jpg','img_3062.jpg','img_3063.jpg','img_3064.jpg','img_3065.jpg','img_3066.jpg','img_3067.jpg','img_3068.jpg','img_3069.jpg'];
 
-const faqs = [
+type FAQItem = { category: string; q: string; a: string; image?: string; imageAlt?: string };
+
+const faqs: FAQItem[] = [
   { category: 'Why Guests Choose Sea Turtle Villa', q: 'What makes Sea Turtle Villa different from other Roatan vacation rentals?', a: 'Sea Turtle Villa combines the comfort and privacy of a standalone villa with access to Paradise Beach Resort amenities, creating a rare “private villa + resort access” experience in one of the most walkable areas of West Bay. Guests love the balance of beach access, pools, restaurants, active lifestyle amenities, rooftop relaxation, and family-friendly comfort.' },
   { category: 'Walkable West Bay Lifestyle', q: 'What can guests walk to from the villa?', a: 'One of Sea Turtle Villa’s biggest advantages is its highly walkable location. Guests can walk to West Bay Beach, restaurants, beach bars, snorkeling access points, grocery options, Paradise Beach amenities, Roatan Pickleball Club, Roatan Padel Club, Infinity Bay, and the Roatan Athletic Club gym.' },
   { category: 'Active Island Living', q: 'Is Sea Turtle Villa a good fit for active travelers?', a: 'Yes. Sea Turtle Villa is ideal for guests who want more than just a beach stay. Guests can enjoy nearby pickleball and padel courts, snorkeling, diving, beach walks, gym access at the Roatan Athletic Club at Infinity Bay, rooftop hot tub evenings, and easy walkability throughout West Bay.' },
@@ -79,6 +81,7 @@ const faqs = [
   { category: 'Travel Planning', q: 'Can airport transportation be arranged?', a: 'Yes. Airport transfer can be arranged with Christian by WhatsApp at +504 9840-1482. The guide notes around $40 one way before tip for four or fewer people, with cash preferred and PayPal also an option.' },
   { category: 'Travel Planning', q: 'Are restaurants nearby?', a: 'Yes. There are many restaurants nearby in the West Bay area, including resort dining and walkable beach restaurants. We plan to add a curated restaurant map and guide as the website evolves.' },
   { category: 'Travel Planning', q: 'Is snorkeling good nearby?', a: 'Yes. West Bay is widely known as one of Roatan’s best snorkeling areas, with reef access from shore and colorful marine life close to the beach. It is one of the major reasons guests love this part of the island.' },
+  { category: 'Things To Do', q: 'What is a recommended nearby hike?', a: 'One favorite nearby option is an adventurous ~3-mile walking route that starts at the orange marker — the front door of Sea Turtle Villa — and ends at the blue marker. The steepest part is the first 0.3 miles. It is a great way to enjoy both sides of this lovely island in one adventurous hour of walking.', image: '/images/villa/recommended-hike.png', imageAlt: 'Marked 3-mile recommended hike near Sea Turtle Villa in Roatan' },
   { category: 'Booking', q: 'What is the minimum stay?', a: 'Minimum stay may be as low as one night during low season. During peak season, especially December through April, minimum stays may be higher.' },
   { category: 'Booking', q: 'What is the cancellation policy for direct bookings?', a: 'For direct bookings at Sea Turtle Villa, payments are generally flexible and can be applied toward a future stay if plans change. If you cancel after payment, your reservation amount may be kept as credit toward a future stay within 12 months of the original reservation date. For cancellations made within 14 days of arrival during low or mid season, or within 45 days of arrival during high season, the cost of one night will be charged; any remaining balance can still be used as future-stay credit within 12 months at the applicable seasonal rate. No-shows are charged the full reservation amount regardless of season. For questions or special circumstances, please contact us directly at seaturtlevillaroatan@gmail.com.' },
   { category: 'Booking', q: 'What is the check-in process?', a: 'The check-in process is being finalized for the website. Guests generally check in through the Paradise Beach / Ocean One office and receive wristbands for resort amenities.' },
@@ -251,7 +254,7 @@ export default function Home() {
       </section>
 
       <section id="villa" className="split">
-        <div className="image-stack"><img src="/images/villa/pool-courtyard-alt.jpg" alt="Ocean One Villas resort pool courtyard"/><img src="/images/villa/kitchen-wide.jpg" alt="Modern kitchen at Sea Turtle Villa"/></div>
+        <div className="image-stack"><img src="/images/villa/living-kitchen.jpg" alt="Wide main-floor living and kitchen space at Sea Turtle Villa"/><img src="/images/villa/living-room.jpg" alt="Comfortable main-floor living room at Sea Turtle Villa"/><img src="/images/villa/kitchen-wide.jpg" alt="Modern kitchen at Sea Turtle Villa"/></div>
         <div className="copy-card"><SectionHeader eyebrow="The Villa" title="Designed for families, friends, and relaxed luxury." text="A bright open-plan kitchen and living space, multiple sleeping zones, four full bathrooms, rooftop lounge space, and thoughtful family-ready details make Sea Turtle Villa feel easy from the moment you arrive." />
           <ul className="check-list"><li><CheckCircle2/> King bedroom with pack n plays</li><li><CheckCircle2/> Bedroom with two queen beds</li><li><CheckCircle2/> Small bedroom with double bed</li><li><CheckCircle2/> Queen sofa bed + trundle option</li><li><CheckCircle2/> 4 full bathrooms, including 3 en-suite</li><li><CheckCircle2/> Rooftop hot tub, hammocks, grill/patio space</li></ul>
         </div>
@@ -284,7 +287,7 @@ export default function Home() {
 
       <section id="faq" className="faq-section">
         <SectionHeader eyebrow="FAQ" title="Helpful answers before your Roatan stay." text="A growing collection of answers for families, first-time Roatan travelers, remote workers, and guests comparing villa and resort-style stays." />
-        <div className="faq-grid">{faqs.map(item => <details key={item.q}><summary><span>{item.category}</span>{item.q}</summary><p>{item.a}</p></details>)}</div>
+        <div className="faq-grid">{faqs.map(item => <details key={item.q}><summary><span>{item.category}</span>{item.q}</summary><p>{item.a}</p>{item.image ? <img className="faq-image" src={item.image} alt={item.imageAlt || item.q} /> : null}</details>)}</div>
         <p className="faq-note"><HelpCircle size={18}/> Questions about direct booking, dates, or special circumstances? Email seaturtlevillaroatan@gmail.com anytime.</p>
       </section>
 
