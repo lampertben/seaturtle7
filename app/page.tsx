@@ -298,6 +298,40 @@ export default function Home() {
         <div className="trust-grid">{trustFeatures.map(([title, Icon, text]: any) => <article key={title}><Icon/><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
 
+
+      <section className="lifestyle-guides">
+        <SectionHeader eyebrow="Local Guide" title="Discover the Sea Turtle Villa lifestyle." text="Three quick guides to help guests picture the stay: family-friendly West Bay ease, active island days, and the hidden-gem rhythm of Roatan." />
+        <div className="guide-card-grid">
+          <a className="guide-card" href="/roatan-family-vacation">
+            <img src="/images/villa/pool-courtyard-alt.jpg" alt="Toddler-friendly Ocean One pool near Sea Turtle Villa" />
+            <div>
+              <p className="eyebrow">Family Travel</p>
+              <h3>Why Families Love West Bay</h3>
+              <p>Pack-n-plays, white noise machines, stair railings, a main-floor bedroom, grocery convenience, and a pool kids love.</p>
+              <span>Read the family guide →</span>
+            </div>
+          </a>
+          <a className="guide-card" href="/roatan-pickleball-padel-vacation">
+            <img src="/images/amenities/courts-10.jpg" alt="Pickleball and padel courts near Sea Turtle Villa" />
+            <div>
+              <p className="eyebrow">Active Island Living</p>
+              <h3>Play Pickleball & Padel in Paradise</h3>
+              <p>Brand-new courts roughly 300 yards from the front door, with lights, lessons, reservations, tournaments, and a growing club scene.</p>
+              <span>Explore Stay & Play →</span>
+            </div>
+          </a>
+          <a className="guide-card" href="/west-bay-roatan">
+            <img src="/images/villa/villa-exterior-arrival.jpg" alt="Sea Turtle Villa arrival in walkable West Bay Roatan" />
+            <div>
+              <p className="eyebrow">West Bay Guide</p>
+              <h3>Experience West Bay Like a Local</h3>
+              <p>Stay and Play in West Bay. Move and Groove in West End. Beach days, water taxis, hikes, groceries, and easy island rhythm.</p>
+              <span>Read the West Bay guide →</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
       <section className="instagram-preview">
         <div className="instagram-copy">
           <p className="eyebrow">Follow Along</p>
@@ -373,6 +407,7 @@ export default function Home() {
       </section>
 
       <footer><div><div className="footer-brand"><TurtleMark small/><strong>Sea Turtle Villa Roatan</strong></div><p>Ocean One Villa 3 · Roatan, Honduras</p></div><div><a href={bookingUrl}>Book</a><a href={tourUrl}>3D Tour</a><a href={googleReviewsUrl}>Reviews</a><a href={instagramUrl} target="_blank" rel="noreferrer">Instagram</a></div></footer>
-    </main>
+    
+</main>
   );
 }

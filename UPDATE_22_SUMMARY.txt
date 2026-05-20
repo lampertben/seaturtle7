@@ -1,0 +1,11 @@
+
+Sea Turtle Villa Update 22
+
+Included:
+- Added premium editorial-style 3-card lifestyle guide section to homepage
+- Added internal linking to:
+  /west-bay-roatan
+  /roatan-family-vacation
+  /roatan-pickleball-padel-vacation
+- Added stronger family/travel/padel positioning language
+- Preserved existing boutique hospitality design direction

@@ -1,0 +1,10 @@
+Sea Turtle Villa Update 23
+
+Deep polish pass before next deploy:
+- Removed the unstyled Tailwind-style homepage card block that was accidentally placed after the footer.
+- Added a properly styled premium local guide card section before the Instagram/lifestyle area.
+- Rebuilt all three SEO guide pages into consumer-ready editorial pages.
+- Added Ben's authentic family, West Bay, transportation, grocery, pool, and pickleball/padel positioning.
+- Improved guide page CSS, mobile responsiveness, CTAs, callouts, and image rhythm.
+- Updated sitemap.xml generation to include the three new SEO guide pages.
+- Used only existing real villa/property/court photography.
