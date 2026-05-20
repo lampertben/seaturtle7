@@ -200,8 +200,66 @@ function BookingInquiryForm() {
 }
 
 export default function Home() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': ['LodgingBusiness', 'VacationRental'],
+        '@id': 'https://www.seaturtlevillaroatan.com/#villa',
+        name: 'Sea Turtle Villa Roatan',
+        alternateName: 'Ocean One Villa 3',
+        url: 'https://www.seaturtlevillaroatan.com',
+        image: [
+          'https://www.seaturtlevillaroatan.com/images/villa/villa-exterior-arrival.jpg',
+          'https://www.seaturtlevillaroatan.com/images/villa/living-kitchen.jpg',
+          'https://www.seaturtlevillaroatan.com/images/villa/pool-courtyard-alt.jpg',
+          'https://www.seaturtlevillaroatan.com/images/villa/rooftop-night.jpg',
+        ],
+        description: 'A modern Caribbean villa in West Bay, Roatan offering private villa comfort, Paradise Beach resort amenities, private Ocean One pool access, rooftop hot tub, Starlink WiFi, and walkable access to beaches, restaurants, snorkeling, diving, padel, and pickleball.',
+        email: ownerEmail,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'West Bay',
+          addressRegion: 'Bay Islands',
+          addressCountry: 'HN',
+        },
+        amenityFeature: [
+          { '@type': 'LocationFeatureSpecification', name: 'Paradise Beach resort amenities', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Private Ocean One pool access', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Rooftop hot tub', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Rooftop hammocks', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Starlink WiFi', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Family-friendly layout', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Walkable West Bay location', value: true },
+          { '@type': 'LocationFeatureSpecification', name: 'Padel and pickleball nearby', value: true },
+        ],
+        sameAs: [instagramUrl],
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://www.seaturtlevillaroatan.com/#website',
+        url: 'https://www.seaturtlevillaroatan.com',
+        name: 'Sea Turtle Villa Roatan',
+        publisher: { '@id': 'https://www.seaturtlevillaroatan.com/#villa' },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://www.seaturtlevillaroatan.com/#faq',
+        mainEntity: faqs.map(item => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.a,
+          },
+        })),
+      },
+    ],
+  };
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <nav className="nav">
         <a className="brand brand-lockup" href="#top"><TurtleMark small/><span>Sea Turtle</span><small>Villa Roatan</small></a>
         <div className="nav-links">
