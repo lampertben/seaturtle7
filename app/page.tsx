@@ -283,6 +283,16 @@ export default function Home() {
         <div className="photo-grid story-photo-grid">{villaPhotos.map(([alt, src], index) => <figure className={index < 2 ? 'featured-photo' : ''} key={src}><img src={src} alt={alt}/><figcaption>{alt}</figcaption></figure>)}</div>
       </section>
 
+
+      <section className="booking-pop" aria-label="Check Sea Turtle Villa availability">
+        <div className="booking-pop-copy">
+          <p className="eyebrow">Limited availability</p>
+          <h2>Sea Turtle Villa is Booking Up Fast!</h2>
+          <p>Planning a West Bay escape? Check current availability and start your direct-booking path through Ocean One.</p>
+        </div>
+        <a className="booking-pop-button" href={bookingUrl} target="_blank" rel="noreferrer">Check Availability</a>
+      </section>
+
       <section className="intro brand-watermark">
         <TurtleMark />
         <div><p className="eyebrow">The Sea Turtle Villa Difference</p><h2>Modern island living, wrapped in the ease of a resort.</h2></div>
