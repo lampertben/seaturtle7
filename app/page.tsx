@@ -256,7 +256,7 @@ export default function Home() {
       </section>
 
       <section id="villa" className="split">
-        <div className="image-stack"><img src="/images/villa/living-kitchen.jpg" alt="Wide main-floor living and kitchen space at Sea Turtle Villa"/><img src="/images/villa/main-floor-living-wide.jpg" alt="Spacious main-floor living area at Sea Turtle Villa"/><img src="/images/villa/main-floor-living-open.jpg" alt="Open-concept main-floor living, kitchen, and dining space at Sea Turtle Villa"/></div>
+        <div className="image-stack"><img src="/images/villa/living-kitchen.jpg" alt="Kitchen island and dining seating at Sea Turtle Villa"/><img src="/images/villa/main-floor-living-wide.jpg" alt="Open-concept kitchen and living area at Sea Turtle Villa"/><img src="/images/villa/main-floor-living-open.jpg" alt="Bright kitchen and island seating at Sea Turtle Villa"/></div>
         <div className="copy-card"><SectionHeader eyebrow="The Villa" title="Designed for families, friends, and relaxed luxury." text="A bright open-plan kitchen and living space, multiple sleeping zones, four full bathrooms, rooftop lounge space, and thoughtful family-ready details make Sea Turtle Villa feel easy from the moment you arrive." />
           <ul className="check-list"><li><CheckCircle2/> King bedroom with pack n plays</li><li><CheckCircle2/> Bedroom with two queen beds</li><li><CheckCircle2/> Small bedroom with double bed</li><li><CheckCircle2/> Queen sofa bed + trundle option</li><li><CheckCircle2/> 4 full bathrooms, including 3 en-suite</li><li><CheckCircle2/> Rooftop hot tub, hammocks, grill/patio space</li></ul>
         </div>
