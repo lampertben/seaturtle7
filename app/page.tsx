@@ -10,12 +10,14 @@ const tourUrl = 'https://www.virtuo-reality.com/F14dxmuYqG/44600883p&285.07h&86.
 const googleReviewsUrl = 'https://share.google/0hxN4hYRZ0UWF6eCw';
 const paradiseUrl = 'https://www.paradisehotels.com/';
 const instagramUrl = 'https://www.instagram.com/seaturtlevillaroatan?igsh=MWE5d2hjd3NjYWczaQ==';
+const padelInstagramUrl = 'https://www.instagram.com/padelroatan/';
+const westBayMapUrl = 'https://www.google.com/maps/place/Ocean+One+Roatan/@16.2738517,-86.6004363,17z/data=!3m1!4b1!4m9!3m8!1s0x8f69c3014bed4f97:0xed795471ca3378a!5m2!4m1!1i2!8m2!3d16.2738517!4d-86.5978614!16s%2Fg%2F11nxr_n6k3?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D';
 const ownerEmail = 'seaturtlevillaroatan@gmail.com';
 const formspreeUrl = 'https://formspree.io/f/mredgwoa';
 
 const villaPhotos = [
   ['Resort pool courtyard', '/images/villa/pool-courtyard-alt.jpg'],
-  ['Sea Turtle Villa exterior', '/images/villa/villa-exterior-sun.jpg'],
+  ['Sea Turtle Villa exterior', '/images/villa/villa-exterior-arrival.jpg'],
   ['Open kitchen', '/images/villa/kitchen-wide.jpg'],
   ['Living & play space', '/images/villa/living-play-space.jpg'],
   ['King bedroom', '/images/villa/king-bedroom-alt.jpg'],
@@ -254,7 +256,7 @@ export default function Home() {
       </section>
 
       <section id="villa" className="split">
-        <div className="image-stack"><img src="/images/villa/living-kitchen.jpg" alt="Wide main-floor living and kitchen space at Sea Turtle Villa"/><img src="/images/villa/living-room.jpg" alt="Comfortable main-floor living room at Sea Turtle Villa"/><img src="/images/villa/kitchen-wide.jpg" alt="Modern kitchen at Sea Turtle Villa"/></div>
+        <div className="image-stack"><img src="/images/villa/living-kitchen.jpg" alt="Wide main-floor living and kitchen space at Sea Turtle Villa"/><img src="/images/villa/main-floor-living-wide.jpg" alt="Spacious main-floor living area at Sea Turtle Villa"/><img src="/images/villa/living-room.jpg" alt="Comfortable main-floor living room at Sea Turtle Villa"/></div>
         <div className="copy-card"><SectionHeader eyebrow="The Villa" title="Designed for families, friends, and relaxed luxury." text="A bright open-plan kitchen and living space, multiple sleeping zones, four full bathrooms, rooftop lounge space, and thoughtful family-ready details make Sea Turtle Villa feel easy from the moment you arrive." />
           <ul className="check-list"><li><CheckCircle2/> King bedroom with pack n plays</li><li><CheckCircle2/> Bedroom with two queen beds</li><li><CheckCircle2/> Small bedroom with double bed</li><li><CheckCircle2/> Queen sofa bed + trundle option</li><li><CheckCircle2/> 4 full bathrooms, including 3 en-suite</li><li><CheckCircle2/> Rooftop hot tub, hammocks, grill/patio space</li></ul>
         </div>
@@ -269,8 +271,8 @@ export default function Home() {
         <SectionHeader eyebrow="Included Resort Access" title="Private villa, Paradise Beach Resort amenities." text="Sea Turtle Villa is part of Ocean One Villas, connected with Paradise Beach Resort. Guests enjoy the comfort of a private home base with resort amenities close by." />
         <div className="amenity-cards">
           <article><Waves/><h3>Beach & Resort</h3><p>Roped-off/private beach access, resort pools, tropical gardens, restaurants, bars, live music, terrace pool, spa/massage room, rooftop gym, dive center, tours, and activities.</p><ButtonLink href={paradiseUrl} variant="secondary">Paradise Beach Hotel</ButtonLink></article>
-          <article><Dumbbell/><h3>Padel & Pickleball</h3><p>Brand-new Roatan Padel Club and Roatan Pickleball Club courts are next door — a unique active-travel amenity for families and groups.</p></article>
-          <article><MapPin/><h3>West Bay Convenience</h3><p>Walkable access to beach days, restaurants, snorkeling, local shops, groceries, resort services, and classic Roatan vacation experiences.</p></article>
+          <article><Dumbbell/><h3>Padel & Pickleball</h3><p>Brand-new Roatan Padel Club and Roatan Pickleball Club courts are next door — a unique active-travel amenity for families and groups.</p><a className="amenity-link" href={padelInstagramUrl} target="_blank" rel="noreferrer">Follow Roatan Padel Club <ExternalLink size={14}/></a></article>
+          <article><MapPin/><h3>West Bay Convenience</h3><p>Walkable access to beach days, restaurants, snorkeling, local shops, groceries, resort services, and classic Roatan vacation experiences.</p><a className="amenity-link" href={westBayMapUrl} target="_blank" rel="noreferrer">View Sea Turtle Villa on Google Maps <ExternalLink size={14}/></a></article>
         </div>
         <div className="courts-grid"><img src="/images/amenities/courts-01.jpg" alt="Roatan padel court"/><img src="/images/amenities/courts-03.jpg" alt="Roatan pickleball and padel courts"/><img src="/images/amenities/courts-05.jpg" alt="Roatan Padel Club lounge"/><img src="/images/amenities/courts-07.jpg" alt="Roatan pickleball courts at Paradise Beach Resort"/><img src="/images/amenities/courts-10.jpg" alt="Pickleball courts near Sea Turtle Villa"/><img src="/images/amenities/courts-12.jpg" alt="Roatan Pickleball Club courts"/></div>
       </section>

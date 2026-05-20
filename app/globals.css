@@ -32,3 +32,7 @@
   .hero h1{font-size:36px}
   .hero-actions .btn{padding:13px 18px}
 }
+
+/* Update 17: subtle contextual links in amenity cards */
+.amenity-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--sand);border-radius:999px;padding:11px 16px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:var(--ink)}
+.amenity-link:hover{transform:translateY(-1px);background:#efe2cf}
