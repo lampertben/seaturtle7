@@ -7,9 +7,9 @@ export const metadata = {
 const courtDetails = [
   'Two brand-new pickleball courts',
   'Two brand-new padel courts',
-  'Roughly 300 yards from the villa front door',
+  'Roughly 300 yards from the villa',
   'Lights for night play',
-  'Reservations through the Playbypoint app',
+  'Reservations through Playbypoint',
   'Pros available for lessons',
   'Pro shop and hangout area',
   'Tournament and social-play energy',
@@ -19,21 +19,21 @@ export default function Page() {
   return (
     <main className="seo-page">
       <a className="seo-back" href="/">← Back to Sea Turtle Villa</a>
+
       <section className="seo-hero guide-hero">
         <div>
           <p className="eyebrow">Pickleball & Padel in Roatan</p>
           <h1>Play courtside in paradise, then walk home to your villa.</h1>
-          <p className="lead">Sea Turtle Villa is uniquely positioned for active travelers: brand-new pickleball and padel courts sit roughly 300 yards from the front door, giving guests a rare West Bay “Stay & Play” island experience.</p>
+          <p className="lead">Sea Turtle Villa sits roughly 300 yards from brand-new pickleball and padel courts, creating a rare West Bay stay for active travelers, families, and groups.</p>
         </div>
         <img src="/images/amenities/courts-10.jpg" alt="Pickleball courts near Sea Turtle Villa in Roatan" />
       </section>
 
       <section className="seo-split">
         <div>
-          <p className="eyebrow">Active Island Living</p>
-          <h2>A different kind of Roatan vacation.</h2>
-          <p>This is not just a beach-and-pool stay. Guests can start the day with coffee at the villa, walk to a court reservation, cool off at the pool, head to the beach, and finish the evening with rooftop hot tub time.</p>
-          <p>The courts bring together the best parts of an active vacation: movement, community, friendly competition, and a reason to enjoy West Bay beyond the sand.</p>
+          <p className="eyebrow">Play</p>
+          <h2>Courts close enough to fit naturally into the day.</h2>
+          <p>Because the courts are so close, play does not need to become a major outing. It can be a morning session, a night match under the lights, a lesson, or a fun family activity between beach and pool time.</p>
         </div>
         <div className="seo-callout">
           <h3>Court experience</h3>
@@ -48,36 +48,51 @@ export default function Page() {
       </section>
 
       <section className="seo-grid-3">
-        <article><h3>Easy to fit into the day</h3><p>Because the courts are so close, guests do not need to turn play into a major outing. It can be a morning session, evening match, or quick family activity.</p></article>
-        <article><h3>Good for beginners and players</h3><p>With pros available for lessons and a polished club environment, the experience can work for curious first-timers, casual players, and more serious padel or pickleball travelers.</p></article>
-        <article><h3>Stay & Play potential</h3><p>Stay tuned for future Stay & Play packages and specials when booking Sea Turtle Villa for Roatan pickleball and padel trips.</p></article>
+        <article><h3>Beginners</h3><p>Lessons and a welcoming club environment make it easy for first-timers to try padel or pickleball in West Bay.</p></article>
+        <article><h3>Players</h3><p>Courts, lighting, reservations, and tournament energy make the area appealing for more serious active travelers too.</p></article>
+        <article><h3>Groups</h3><p>Sea Turtle Villa works well for families or friends who want beach, pool, and court time in the same trip.</p></article>
       </section>
 
       <section className="seo-split reverse">
-        <img src="/images/local/paradise-beach-divers.jpg" alt="Paradise Beach Divers near Sea Turtle Villa for active island days" />
+        <img src="/images/local/serenity-day-spa.jpg" alt="Serenity Day Spa near Sea Turtle Villa for recovery and relaxation" />
         <div>
-          <p className="eyebrow">After You Play</p>
-          <h2>Recover the island way.</h2>
-          <p>After a match, Sea Turtle Villa makes it easy to reset: private Ocean One pool, Paradise Beach resort amenities, rooftop hammocks, hot tub evenings, Starlink WiFi, walkable West Bay restaurants, nearby spa services, and fitness options at Infinity Bay.</p>
-          <p>Follow the local club scene on Instagram for tournaments, lessons, court updates, and Roatan padel and pickleball momentum.</p>
-          <a className="btn secondary" href="https://www.instagram.com/padelroatan/" target="_blank" rel="noreferrer">Follow Roatan Padel Club</a>
+          <p className="eyebrow">Recover</p>
+          <h2>Spa, pool, rooftop, repeat.</h2>
+          <p>After a match, recovery is easy: private Ocean One pool, rooftop hammocks, hot tub evenings, spa services nearby, and West Bay restaurants within walking distance.</p>
+          <div className="guide-link-row">
+            <a className="btn secondary" href="https://wblodgeroatan.com/serenity-day-spa/" target="_blank" rel="noreferrer">Serenity Day Spa</a>
+            <a className="btn secondary" href="https://www.grandroatanresortandspa.com/us/en/kao-kamasa-spa/" target="_blank" rel="noreferrer">Kao Kamasa Spa</a>
+          </div>
         </div>
       </section>
 
-
       <section className="seo-split">
         <div>
-          <p className="eyebrow">Train, Play, Recover</p>
-          <h2>Stay active without making it complicated.</h2>
-          <p>One of the things we love most about West Bay is how easy it is to stay active. Guests can play pickleball or padel, work out at the nearby Infinity Bay Athletic Club, snorkel directly from West Bay Beach, enjoy a spa treatment, and finish the day relaxing poolside at Sea Turtle Villa.</p>
+          <p className="eyebrow">Train</p>
+          <h2>Stay active beyond the courts.</h2>
+          <p>Guests can also work out at Infinity Bay Athletic Club, snorkel from West Bay Beach, book diving nearby, walk the beach, or hike from the villa area.</p>
+          <p>It is an easy active-lifestyle base without sacrificing comfort or convenience.</p>
+          <div className="guide-link-row">
+            <a className="btn secondary" href="https://www.infinitybay.com/explore/roatan-athletic-club" target="_blank" rel="noreferrer">Infinity Bay Athletic Club</a>
+            <a className="btn secondary" href="https://www.instagram.com/padelroatan/" target="_blank" rel="noreferrer">Roatan Padel Club</a>
+          </div>
         </div>
-        <img className="seo-side-image" src="/images/local/serenity-day-spa.jpg" alt="Serenity Day Spa near Sea Turtle Villa for recovery and relaxation" />
+        <img className="seo-side-image" src="/images/local/paradise-beach-divers.jpg" alt="Paradise Beach Divers near Sea Turtle Villa for active island days" />
+      </section>
+
+      <section className="seo-split reverse">
+        <img src="/images/villa/night-pool-close.jpg" alt="Evening pool relaxation at Sea Turtle Villa after active West Bay days" />
+        <div>
+          <p className="eyebrow">Relax</p>
+          <h2>The best active days end back at the villa.</h2>
+          <p>Play in the morning, swim in the afternoon, walk to dinner, then come home to an illuminated pool or rooftop hot tub. That is the Sea Turtle Villa version of Stay & Play.</p>
+        </div>
       </section>
 
       <section className="seo-cta">
         <h2>Planning a Roatan pickleball or padel trip?</h2>
-        <p>Ask us about court proximity, family travel, group stays, and future Stay & Play options at Sea Turtle Villa.</p>
-        <a className="btn primary" href="/#inquiry">Ask About Stay & Play</a>
+        <p>Ask us about court proximity, family travel, group stays, and future Stay & Play opportunities.</p>
+        <a className="btn" href="/">Explore the villa</a>
       </section>
     </main>
   );

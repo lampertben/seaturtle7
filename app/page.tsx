@@ -17,7 +17,7 @@ const eldonsUrl = 'https://www.facebook.com/eldonssupermarkets/';
 const roatanClinicUrl = 'https://roatanclinic.com/';
 const mediplusUrl = 'https://www.facebook.com/mediplusroatan/';
 const kristisUrl = 'https://www.facebook.com/p/Kristis-Island-Kitchen-100093193690927/';
-const serenitySpaUrl = 'https://www.facebook.com/search/top?q=serenity%20day%20spa%20west%20bay%20roatan';
+const serenitySpaUrl = 'https://wblodgeroatan.com/serenity-day-spa/';
 const kimptonSpaUrl = 'https://www.grandroatanresortandspa.com/us/en/kao-kamasa-spa/';
 const infinityAthleticUrl = 'https://www.infinitybay.com/explore/roatan-athletic-club';
 const westBayMapUrl = 'https://www.google.com/maps/place/Ocean+One+Roatan/@16.2738517,-86.6004363,17z/data=!3m1!4b1!4m9!3m8!1s0x8f69c3014bed4f97:0xed795471ca3378a!5m2!4m1!1i2!8m2!3d16.2738517!4d-86.5978614!16s%2Fg%2F11nxr_n6k3?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D';

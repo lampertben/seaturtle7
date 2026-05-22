@@ -254,3 +254,7 @@
 .convenience-grid{grid-template-columns:repeat(4,1fr)}
 @media(max-width:1100px){.convenience-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.convenience-grid{grid-template-columns:1fr}}
+
+.guide-link-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.guide-link-row .btn{margin:0}
+@media(max-width:720px){.guide-link-row{flex-direction:column}.guide-link-row .btn{width:100%;justify-content:center}}
