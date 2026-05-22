@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default: 'Sea Turtle Villa Roatan | Luxury West Bay Villa Rental',
     template: '%s | Sea Turtle Villa Roatan',
   },
-  description: 'Sea Turtle Villa is a modern Caribbean villa in West Bay, Roatan with Paradise Beach resort amenities, private Ocean One pool, rooftop hot tub, Starlink WiFi, walkable beach access, padel, pickleball and direct booking.',
+  description: 'Sea Turtle Villa is a private Caribbean villa in West Bay, Roatan with Paradise Beach resort amenities, an illuminated Ocean One pool, rooftop hot tub and hammocks, Starlink WiFi, walkable beach access, padel, pickleball and direct booking.',
   keywords: [
     'Sea Turtle Villa Roatan',
     'Roatan villa rental',
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     siteName: 'Sea Turtle Villa Roatan',
     images: [
       {
-        url: '/images/villa/villa-exterior-arrival.jpg',
+        url: '/images/villa/night-pool-aerial.jpg',
         width: 1200,
         height: 630,
-        alt: 'Sea Turtle Villa exterior arrival in West Bay Roatan',
+        alt: 'Illuminated pool at Sea Turtle Villa in West Bay Roatan',
       },
     ],
     locale: 'en_US',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sea Turtle Villa Roatan | Luxury West Bay Villa Rental',
     description: 'A modern Caribbean villa in West Bay, Roatan with resort amenities, rooftop hot tub, private pool, Starlink WiFi, and walkable beach access.',
-    images: ['/images/villa/villa-exterior-arrival.jpg'],
+    images: ['/images/villa/night-pool-aerial.jpg'],
   },
 };
 

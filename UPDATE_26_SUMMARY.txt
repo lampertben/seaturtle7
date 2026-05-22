@@ -1,0 +1,16 @@
+Sea Turtle Villa Update 26 – Nighttime Photography + Conversion Upgrade
+
+Included:
+- Added new professional nighttime villa photography to /public/images/villa/
+- Expanded homepage gallery into a day-to-night visual story
+- Added new “Evenings at Sea Turtle Villa” homepage section
+- Added nighttime pool image booking CTA: “Sea Turtle Villa is Booking Up Fast!”
+- Added “Why Guests Love Staying Here” conversion section
+- Added FAQ: “What is the villa like at night?”
+- Updated guide cards with stronger nighttime imagery
+- Added nighttime photography to West Bay, Family Vacation, and Pickleball/Padel guide pages
+- Refined homepage copy:
+  - “Private island living, wrapped in the ease of a resort.”
+  - “Comforts and conveniences for modern international travelers.”
+- Updated OpenGraph/Twitter share image to the nighttime pool aerial
+- Preserved existing Formspree inquiry flow, Ocean One booking link, sitemap, robots.txt, and site structure

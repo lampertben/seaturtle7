@@ -42,7 +42,7 @@ export default function Page() {
       </section>
 
       <section className="seo-image-band">
-        <img src="/images/villa/pool-courtyard-alt.jpg" alt="Ocean One pool with shallow section for kids" />
+        <img src="/images/villa/night-pool-close.jpg" alt="Ocean One pool with shallow section for kids" />
         <img src="/images/villa/living-kitchen.jpg" alt="Open kitchen and living space for families" />
       </section>
 
@@ -60,6 +60,16 @@ export default function Page() {
           <p>A new grocery store is literally across the street, which means families can grab fresh food, snacks, diapers, drinks, breakfast items, and forgotten essentials without turning every errand into a car trip.</p>
           <p>The pool area is stroller-friendly, and families often walk laps around the pool with little ones in strollers. Add Starlink internet, laundry, multiple sleeping zones, and main-floor living, and the villa becomes a much easier base for families than a typical beach rental.</p>
         </div>
+      </section>
+
+
+      <section className="seo-split">
+        <div>
+          <p className="eyebrow">Evenings with Kids</p>
+          <h2>Family days do not have to end when the sun goes down.</h2>
+          <p>After beach walks, pool days, and West Bay adventures, families can settle into a calmer evening rhythm: toddlers enjoying the shallow pool area, parents relaxing nearby, rainy-night hot tub time, and easy dinners close to home.</p>
+        </div>
+        <img className="seo-side-image" src="/images/villa/night-pool-aerial.jpg" alt="Sea Turtle Villa illuminated pool at night for family evenings" />
       </section>
 
       <section className="seo-cta">

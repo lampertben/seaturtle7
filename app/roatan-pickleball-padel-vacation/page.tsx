@@ -54,7 +54,7 @@ export default function Page() {
       </section>
 
       <section className="seo-split reverse">
-        <img src="/images/villa/rooftop-night.jpg" alt="Rooftop hot tub at night after active island days" />
+        <img src="/images/villa/night-rooftop-hammocks.jpg" alt="Rooftop hot tub at night after active island days" />
         <div>
           <p className="eyebrow">After You Play</p>
           <h2>Recover the island way.</h2>
@@ -62,6 +62,16 @@ export default function Page() {
           <p>Follow the local club scene on Instagram for tournaments, lessons, court updates, and Roatan padel and pickleball momentum.</p>
           <a className="btn secondary" href="https://www.instagram.com/padelroatan/" target="_blank" rel="noreferrer">Follow Roatan Padel Club</a>
         </div>
+      </section>
+
+
+      <section className="seo-split">
+        <div>
+          <p className="eyebrow">After Play</p>
+          <h2>Recover above the palms.</h2>
+          <p>After pickleball, padel, beach walks, snorkeling, or gym time, the villa shifts into evening recovery mode: rooftop hammocks, a private hot tub, tropical breezes, and the illuminated pool below.</p>
+        </div>
+        <img className="seo-side-image" src="/images/villa/night-rooftop-hammocks.jpg" alt="Rooftop hammocks and hot tub after active island days" />
       </section>
 
       <section className="seo-cta">

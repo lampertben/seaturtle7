@@ -16,14 +16,16 @@ const ownerEmail = 'seaturtlevillaroatan@gmail.com';
 const formspreeUrl = 'https://formspree.io/f/mredgwoa';
 
 const villaPhotos = [
+  ['Sea Turtle Villa arrival', '/images/villa/villa-exterior-arrival.jpg'],
+  ['Illuminated pool after sunset', '/images/villa/night-pool-aerial.jpg'],
   ['Resort pool courtyard', '/images/villa/pool-courtyard-alt.jpg'],
-  ['Sea Turtle Villa exterior', '/images/villa/villa-exterior-arrival.jpg'],
-  ['Open kitchen', '/images/villa/kitchen-wide.jpg'],
-  ['Living & play space', '/images/villa/living-play-space.jpg'],
+  ['Open kitchen and living', '/images/villa/main-floor-living-wide.jpg'],
+  ['Kitchen island and gathering space', '/images/villa/main-floor-living-open.jpg'],
+  ['Rooftop hot tub and hammocks', '/images/villa/night-rooftop-hammocks.jpg'],
   ['King bedroom', '/images/villa/king-bedroom-alt.jpg'],
   ['Double queen bedroom', '/images/villa/king-bedroom.jpg'],
-  ['Double bedroom mural room', '/images/villa/double-bed-mural.jpg'],
-  ['Rooftop lounge', '/images/villa/rooftop-day.jpg'],
+  ['Double/full bedroom mural room', '/images/villa/double-bed-mural.jpg'],
+  ['Evening villa glow', '/images/villa/night-villa-exterior.jpg'],
 ];
 
 const highlights = [
@@ -67,6 +69,7 @@ const faqs: FAQItem[] = [
   { category: 'Why Guests Choose Sea Turtle Villa', q: 'What makes Sea Turtle Villa different from other Roatan vacation rentals?', a: 'Sea Turtle Villa combines the comfort and privacy of a standalone villa with access to Paradise Beach Resort amenities, creating a rare “private villa + resort access” experience in one of the most walkable areas of West Bay. Guests love the balance of beach access, pools, restaurants, active lifestyle amenities, rooftop relaxation, and family-friendly comfort.' },
   { category: 'Walkable West Bay Lifestyle', q: 'What can guests walk to from the villa?', a: 'One of Sea Turtle Villa’s biggest advantages is its highly walkable location. Guests can walk to West Bay Beach, restaurants, beach bars, snorkeling access points, grocery options, Paradise Beach amenities, Roatan Pickleball Club, Roatan Padel Club, Infinity Bay, and the Roatan Athletic Club gym.' },
   { category: 'Active Island Living', q: 'Is Sea Turtle Villa a good fit for active travelers?', a: 'Yes. Sea Turtle Villa is ideal for guests who want more than just a beach stay. Guests can enjoy nearby pickleball and padel courts, snorkeling, diving, beach walks, gym access at the Roatan Athletic Club at Infinity Bay, rooftop hot tub evenings, and easy walkability throughout West Bay.' },
+  { category: 'Evenings at Sea Turtle Villa', q: 'What is the villa like at night?', a: 'Many guests tell us evenings become their favorite part of the stay. After a day at West Bay Beach, relax in the rooftop hot tub, enjoy the illuminated pool, unwind in the hammocks beneath the stars, or gather with family and friends in the peaceful tropical atmosphere around the villa.' },
   { category: 'Travel Planning', q: 'How does airport transportation work?', a: 'Many guests choose to arrange airport transportation with our recommended local driver, Christian. He typically meets guests just outside customs and provides a simple, stress-free ride directly to Sea Turtle Villa, helping make arrival in Roatan feel easy from the beginning of the trip.' },
   { category: 'Villa Comfort', q: 'How many guests can Sea Turtle Villa sleep?', a: 'The villa includes one king bedroom with two pack n plays, one bedroom with two queen beds, one smaller bedroom with a double bed, and a queen-size sofa bed. There are four full bathrooms, including three en-suite bathrooms plus one hallway bathroom.' },
   { category: 'Villa Comfort', q: 'Is there air conditioning?', a: 'Yes. Sea Turtle Villa has multi-zoned A/C so guests can keep the main living areas and bedrooms comfortable throughout their stay.' },
@@ -279,23 +282,40 @@ export default function Home() {
       </section>
 
       <section className="gallery elevated-gallery">
-        <SectionHeader eyebrow="Visual Tour" title="A first look at island living, Sea Turtle Villa style." text="From rooftop evenings and poolside mornings to bright family spaces and walkable West Bay days, the gallery brings the stay into focus early in the experience." />
+        <SectionHeader eyebrow="Visual Tour" title="A day-to-night look at Sea Turtle Villa." text="From bright family spaces and poolside mornings to glowing evening swims and rooftop relaxation, the gallery brings the full stay into focus early in the experience." />
         <div className="photo-grid story-photo-grid">{villaPhotos.map(([alt, src], index) => <figure className={index < 2 ? 'featured-photo' : ''} key={src}><img src={src} alt={alt}/><figcaption>{alt}</figcaption></figure>)}</div>
       </section>
 
 
-      <section className="booking-pop" aria-label="Check Sea Turtle Villa availability">
-        <div className="booking-pop-copy">
-          <p className="eyebrow">Limited availability</p>
-          <h2>Sea Turtle Villa is Booking Up Fast!</h2>
-          <p>Planning a West Bay escape? Check current availability and start your direct-booking path through Ocean One.</p>
+      <section className="evening-section">
+        <div className="evening-copy">
+          <p className="eyebrow">After Dark</p>
+          <h2>Evenings at Sea Turtle Villa</h2>
+          <p>Whether you're enjoying a sunset soak in the rooftop hot tub, relaxing in the hammocks beneath the stars, grilling poolside, or unwinding after a day on West Bay Beach, evenings at Sea Turtle Villa are often guests' favorite part of the experience.</p>
+          <p>Warm lighting, tropical breezes, and the peaceful atmosphere around Paradise Beach create a completely different side of the stay after dark.</p>
         </div>
-        <a className="booking-pop-button" href={bookingUrl} target="_blank" rel="noreferrer">Check Availability</a>
+        <div className="night-gallery">
+          <figure className="night-feature"><img src="/images/villa/night-pool-aerial.jpg" alt="Illuminated pool at Sea Turtle Villa after sunset" /><figcaption>Evening swims and poolside gathering</figcaption></figure>
+          <figure><img src="/images/villa/night-pool-close.jpg" alt="Glowing pool close-up at Sea Turtle Villa at night" /><figcaption>Pool after sunset</figcaption></figure>
+          <figure><img src="/images/villa/night-rooftop-hammocks.jpg" alt="Rooftop hammocks and hot tub at night" /><figcaption>Rooftop hammocks beneath the stars</figcaption></figure>
+          <figure><img src="/images/villa/night-villa-exterior.jpg" alt="Sea Turtle Villa exterior warmly lit at night" /><figcaption>Warm villa lighting after dark</figcaption></figure>
+        </div>
+      </section>
+
+      <section className="booking-pop night-booking" aria-label="Check Sea Turtle Villa availability">
+        <img src="/images/villa/night-pool-aerial.jpg" alt="" />
+        <div className="booking-pop-overlay"></div>
+        <div className="booking-pop-content">
+          <p className="eyebrow light-text">Limited availability</p>
+          <h2>Sea Turtle Villa is Booking Up Fast!</h2>
+          <p>Secure your preferred dates and experience private island living, wrapped in the ease of a resort.</p>
+          <a className="booking-pop-button" href={bookingUrl} target="_blank" rel="noreferrer">Check Availability</a>
+        </div>
       </section>
 
       <section className="intro brand-watermark">
         <TurtleMark />
-        <div><p className="eyebrow">The Sea Turtle Villa Difference</p><h2>Modern island living, wrapped in the ease of a resort.</h2></div>
+        <div><p className="eyebrow">The Sea Turtle Villa Difference</p><h2>Private island living, wrapped in the ease of a resort.</h2></div>
         <p>Stay in a spacious private villa while enjoying access to the amenities and energy of Paradise Beach Resort. It is the rare Roatan experience that blends privacy, walkability, family comfort, and resort convenience in one polished setting.</p>
       </section>
 
@@ -303,8 +323,18 @@ export default function Home() {
         {highlights.map(([label, Icon]: any) => <div className="highlight" key={label}><Icon size={24}/><span>{label}</span></div>)}
       </section>
 
+
+      <section className="guest-love">
+        <SectionHeader eyebrow="Why Guests Love Staying Here" title="Day or night, Sea Turtle Villa offers one of the most memorable vacation experiences in West Bay." text="The strongest stays are easy, beautiful, and low-stress. Sea Turtle Villa is designed around the details families and international travelers notice most." />
+        <div className="guest-love-grid">
+          <article><MapPin/><h3>Walk Everywhere</h3><p>Beach, restaurants, groceries, pickleball, padel, resort amenities, and water taxis are all within a short walk.</p></article>
+          <article><Heart/><h3>Family-Friendly by Design</h3><p>Pack-n-plays, white noise machines, stair railings, a main-floor bedroom, and a shallow pool entry help all ages feel comfortable.</p></article>
+          <article><Palmtree/><h3>Private Villa + Resort Access</h3><p>Enjoy the privacy and space of your own villa while staying connected to the amenities and energy of Paradise Beach.</p></article>
+        </div>
+      </section>
+
       <section className="trust-strip">
-        <SectionHeader eyebrow="Travel Confidence" title="The practical comforts guests ask about most." text="Sea Turtle Villa is built for easy international travel: fast WiFi, dedicated parking, gated access, resort amenities, and family-ready convenience." />
+        <SectionHeader eyebrow="Travel Confidence" title="Comforts and conveniences for modern international travelers." text="Sea Turtle Villa is built for easy international travel: fast WiFi, dedicated parking, gated access, resort amenities, and family-ready convenience." />
         <div className="trust-grid">{trustFeatures.map(([title, Icon, text]: any) => <article key={title}><Icon/><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
 
@@ -313,7 +343,7 @@ export default function Home() {
         <SectionHeader eyebrow="Local Guide" title="Discover the Sea Turtle Villa lifestyle." text="Three quick guides to help guests picture the stay: family-friendly West Bay ease, active island days, and the hidden-gem rhythm of Roatan." />
         <div className="guide-card-grid">
           <a className="guide-card" href="/roatan-family-vacation">
-            <img src="/images/villa/pool-courtyard-alt.jpg" alt="Toddler-friendly Ocean One pool near Sea Turtle Villa" />
+            <img src="/images/villa/night-pool-close.jpg" alt="Illuminated pool at Sea Turtle Villa for family evenings" />
             <div>
               <p className="eyebrow">Family Travel</p>
               <h3>Why Families Love West Bay</h3>
@@ -331,7 +361,7 @@ export default function Home() {
             </div>
           </a>
           <a className="guide-card" href="/west-bay-roatan">
-            <img src="/images/villa/villa-exterior-arrival.jpg" alt="Sea Turtle Villa arrival in walkable West Bay Roatan" />
+            <img src="/images/villa/night-pool-aerial.jpg" alt="Sea Turtle Villa illuminated pool and West Bay evening atmosphere" />
             <div>
               <p className="eyebrow">West Bay Guide</p>
               <h3>Experience West Bay Like a Local</h3>
@@ -350,7 +380,7 @@ export default function Home() {
           <a className="instagram-link" href={instagramUrl} target="_blank" rel="noreferrer"><Camera size={18}/> @seaturtlevillaroatan</a>
         </div>
         <div className="instagram-grid">
-          <img src="/images/villa/rooftop-night.jpg" alt="Rooftop hot tub and hammock at night" />
+          <img src="/images/villa/night-rooftop-hammocks.jpg" alt="Rooftop hot tub and hammocks at night" />
           <img src="/images/villa/pool-courtyard-alt.jpg" alt="Ocean One resort pool courtyard" />
           <img src="/images/amenities/courts-10.jpg" alt="Roatan pickleball and padel courts" />
           <img src="/images/villa/kitchen-wide.jpg" alt="Sea Turtle Villa kitchen" />
@@ -404,7 +434,7 @@ export default function Home() {
 
       <section className="experiences">
         <SectionHeader eyebrow="Roatan Experiences" title="Beach, reef, resort, and active island days." />
-        <div className="experience-list"><span><Anchor/> Snorkeling & diving</span><span><Sun/> Rooftop hot tub evenings</span><span><Camera/> 3D tour confidence</span><span><Heart/> Family reunions & repeat stays</span><span><MessageCircle/> Direct booking support</span><span><CalendarDays/> Longer-stay friendly</span></div>
+        <div className="experience-list"><span><Anchor/> Snorkeling & diving</span><span><Sun/> Rooftop hot tub & illuminated pool evenings</span><span><Camera/> 3D tour confidence</span><span><Heart/> Family reunions & repeat stays</span><span><MessageCircle/> Direct booking support</span><span><CalendarDays/> Longer-stay friendly</span></div>
       </section>
 
       <BookingInquiryForm />

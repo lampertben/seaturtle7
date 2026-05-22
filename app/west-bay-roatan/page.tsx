@@ -22,7 +22,7 @@ export default function Page() {
           <h1>Stay and Play in West Bay. Move and Groove in West End.</h1>
           <p className="lead">West Bay has the beach, resort energy, walkability, active lifestyle, and easy daily rhythm guests come to Roatan for — with Sea Turtle Villa tucked close enough to everything while still feeling private and comfortable.</p>
         </div>
-        <img src="/images/villa/villa-exterior-arrival.jpg" alt="Sea Turtle Villa exterior in West Bay Roatan" />
+        <img src="/images/villa/night-pool-aerial.jpg" alt="Illuminated pool at Sea Turtle Villa in West Bay Roatan" />
       </section>
 
       <section className="seo-split">
@@ -39,8 +39,8 @@ export default function Page() {
       </section>
 
       <section className="seo-image-band">
-        <img src="/images/villa/pool-courtyard-alt.jpg" alt="Ocean One pool courtyard in West Bay Roatan" />
-        <img src="/images/villa/rooftop-day.jpg" alt="Rooftop lounge at Sea Turtle Villa" />
+        <img src="/images/villa/night-pool-close.jpg" alt="Illuminated pool courtyard in West Bay Roatan" />
+        <img src="/images/villa/night-rooftop-hammocks.jpg" alt="Rooftop hammocks and hot tub after sunset" />
       </section>
 
       <section className="seo-grid-3">
