@@ -1,0 +1,11 @@
+Sea Turtle Villa Update 28
+
+Implemented:
+- Added new beach photos to the main gallery, excluding Kristi’s from the homepage gallery.
+- Kept rooftop gallery image as the daytime rooftop hot tub/hammocks photo.
+- Updated evening villa caption to “Evening patio BBQ’s and games.”
+- Added new FAQ visuals for baby gear, kitchen appliances, coffee maker, juicer, Fresco Market, Kristi’s, Serenity Day Spa, Paradise Beach Resort entrance, Paradise Beach Divers, beach path, and I Love Roatan chair.
+- Updated grocery and convenience language to clarify Eldon’s for full grocery run and West Bay Mall/Fresco/markets for walkable essentials.
+- Added MediPlus Pharmacy, Roatan Clinic, Serenity Day Spa, Kao Kamasa Spa at Kimpton Grand Roatán, Infinity Bay fitness, Kristi’s Island Kitchen, and Paradise Beach Divers references.
+- Refreshed guide page imagery to reduce repeated homepage photos inside guides.
+- Added more practical family, wellness, walkability, diving/snorkeling, and no-rental-car messaging.

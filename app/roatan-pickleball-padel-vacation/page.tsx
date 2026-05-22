@@ -54,11 +54,11 @@ export default function Page() {
       </section>
 
       <section className="seo-split reverse">
-        <img src="/images/villa/night-rooftop-hammocks.jpg" alt="Rooftop hot tub at night after active island days" />
+        <img src="/images/local/paradise-beach-divers.jpg" alt="Paradise Beach Divers near Sea Turtle Villa for active island days" />
         <div>
           <p className="eyebrow">After You Play</p>
           <h2>Recover the island way.</h2>
-          <p>After a match, Sea Turtle Villa makes it easy to reset: private Ocean One pool, Paradise Beach resort amenities, rooftop hammocks, hot tub evenings, Starlink WiFi, and walkable West Bay restaurants nearby.</p>
+          <p>After a match, Sea Turtle Villa makes it easy to reset: private Ocean One pool, Paradise Beach resort amenities, rooftop hammocks, hot tub evenings, Starlink WiFi, walkable West Bay restaurants, nearby spa services, and fitness options at Infinity Bay.</p>
           <p>Follow the local club scene on Instagram for tournaments, lessons, court updates, and Roatan padel and pickleball momentum.</p>
           <a className="btn secondary" href="https://www.instagram.com/padelroatan/" target="_blank" rel="noreferrer">Follow Roatan Padel Club</a>
         </div>
@@ -67,11 +67,11 @@ export default function Page() {
 
       <section className="seo-split">
         <div>
-          <p className="eyebrow">After Play</p>
-          <h2>Recover above the palms.</h2>
-          <p>After pickleball, padel, beach walks, snorkeling, or gym time, the villa shifts into evening recovery mode: rooftop hammocks, a private hot tub, tropical breezes, and the illuminated pool below.</p>
+          <p className="eyebrow">Train, Play, Recover</p>
+          <h2>Stay active without making it complicated.</h2>
+          <p>One of the things we love most about West Bay is how easy it is to stay active. Guests can play pickleball or padel, work out at the nearby Infinity Bay Athletic Club, snorkel directly from West Bay Beach, enjoy a spa treatment, and finish the day relaxing poolside at Sea Turtle Villa.</p>
         </div>
-        <img className="seo-side-image" src="/images/villa/night-rooftop-hammocks.jpg" alt="Rooftop hammocks and hot tub after active island days" />
+        <img className="seo-side-image" src="/images/local/serenity-day-spa.jpg" alt="Serenity Day Spa near Sea Turtle Villa for recovery and relaxation" />
       </section>
 
       <section className="seo-cta">

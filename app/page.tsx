@@ -11,6 +11,15 @@ const googleReviewsUrl = 'https://share.google/0hxN4hYRZ0UWF6eCw';
 const paradiseUrl = 'https://www.paradisehotels.com/';
 const instagramUrl = 'https://www.instagram.com/seaturtlevillaroatan?igsh=MWE5d2hjd3NjYWczaQ==';
 const padelInstagramUrl = 'https://www.instagram.com/padelroatan/';
+const frescoMarketUrl = 'https://www.facebook.com/frescomarketroatan/';
+const westBayMallUrl = 'https://www.facebook.com/west.baymall/';
+const eldonsUrl = 'https://www.facebook.com/eldonssupermarkets/';
+const roatanClinicUrl = 'https://roatanclinic.com/';
+const mediplusUrl = 'https://www.facebook.com/mediplusroatan/';
+const kristisUrl = 'https://www.facebook.com/p/Kristis-Island-Kitchen-100093193690927/';
+const serenitySpaUrl = 'https://www.facebook.com/search/top?q=serenity%20day%20spa%20west%20bay%20roatan';
+const kimptonSpaUrl = 'https://www.grandroatanresortandspa.com/us/en/kao-kamasa-spa/';
+const infinityAthleticUrl = 'https://www.infinitybay.com/explore/roatan-athletic-club';
 const westBayMapUrl = 'https://www.google.com/maps/place/Ocean+One+Roatan/@16.2738517,-86.6004363,17z/data=!3m1!4b1!4m9!3m8!1s0x8f69c3014bed4f97:0xed795471ca3378a!5m2!4m1!1i2!8m2!3d16.2738517!4d-86.5978614!16s%2Fg%2F11nxr_n6k3?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D';
 const ownerEmail = 'seaturtlevillaroatan@gmail.com';
 const formspreeUrl = 'https://formspree.io/f/mredgwoa';
@@ -21,11 +30,14 @@ const villaPhotos = [
   ['Resort pool courtyard', '/images/villa/pool-courtyard-alt.jpg'],
   ['Open kitchen and living', '/images/villa/main-floor-living-wide.jpg'],
   ['Kitchen island and gathering space', '/images/villa/main-floor-living-open.jpg'],
-  ['Rooftop hot tub and hammocks', '/images/villa/night-rooftop-hammocks.jpg'],
+  ['Rooftop hot tub and hammocks', '/images/villa/rooftop-day.jpg'],
   ['King bedroom', '/images/villa/king-bedroom-alt.jpg'],
   ['Double queen bedroom', '/images/villa/king-bedroom.jpg'],
   ['Double/full bedroom mural room', '/images/villa/double-bed-mural.jpg'],
-  ['Evening villa glow', '/images/villa/night-villa-exterior.jpg'],
+  ['Crystal-clear West Bay shoreline', '/images/local/west-bay-crystal-water.jpg'],
+  ['Palm-lined West Bay beach', '/images/local/west-bay-palm-loungers.jpg'],
+  ['Boats and village rhythm along West Bay', '/images/local/west-bay-beach-boats.jpg'],
+  ['Evening patio BBQ’s and games', '/images/villa/night-villa-exterior.jpg'],
 ];
 
 const highlights = [
@@ -67,31 +79,39 @@ type FAQItem = { category: string; q: string; a: string; image?: string; imageAl
 
 const faqs: FAQItem[] = [
   { category: 'Why Guests Choose Sea Turtle Villa', q: 'What makes Sea Turtle Villa different from other Roatan vacation rentals?', a: 'Sea Turtle Villa combines the comfort and privacy of a standalone villa with access to Paradise Beach Resort amenities, creating a rare “private villa + resort access” experience in one of the most walkable areas of West Bay. Guests love the balance of beach access, pools, restaurants, active lifestyle amenities, rooftop relaxation, and family-friendly comfort.' },
-  { category: 'Walkable West Bay Lifestyle', q: 'What can guests walk to from the villa?', a: 'One of Sea Turtle Villa’s biggest advantages is its highly walkable location. Guests can walk to West Bay Beach, restaurants, beach bars, snorkeling access points, grocery options, Paradise Beach amenities, Roatan Pickleball Club, Roatan Padel Club, Infinity Bay, and the Roatan Athletic Club gym.' },
-  { category: 'Active Island Living', q: 'Is Sea Turtle Villa a good fit for active travelers?', a: 'Yes. Sea Turtle Villa is ideal for guests who want more than just a beach stay. Guests can enjoy nearby pickleball and padel courts, snorkeling, diving, beach walks, gym access at the Roatan Athletic Club at Infinity Bay, rooftop hot tub evenings, and easy walkability throughout West Bay.' },
-  { category: 'Evenings at Sea Turtle Villa', q: 'What is the villa like at night?', a: 'Many guests tell us evenings become their favorite part of the stay. After a day at West Bay Beach, relax in the rooftop hot tub, enjoy the illuminated pool, unwind in the hammocks beneath the stars, or gather with family and friends in the peaceful tropical atmosphere around the villa.' },
-  { category: 'Travel Planning', q: 'How does airport transportation work?', a: 'Many guests choose to arrange airport transportation with our recommended local driver, Christian. He typically meets guests just outside customs and provides a simple, stress-free ride directly to Sea Turtle Villa, helping make arrival in Roatan feel easy from the beginning of the trip.' },
+  { category: 'Walkable West Bay Lifestyle', q: 'What can guests walk to from the villa?', a: 'One of Sea Turtle Villa’s biggest advantages is its highly walkable location. Guests can walk to West Bay Beach, restaurants, beach bars, snorkeling access points, West Bay Mall, Fresco Market, additional neighborhood markets, Kristi’s Island Kitchen, pharmacy services, medical care, Serenity Day Spa, Paradise Beach amenities, Roatan Pickleball Club, Roatan Padel Club, Infinity Bay, and the Roatan Athletic Club gym.', image: '/images/local/beach-access-path.jpg', imageAlt: 'Walkable path toward West Bay Beach near Sea Turtle Villa' },
+  { category: 'Active Island Living', q: 'Is Sea Turtle Villa a good fit for active travelers?', a: 'Yes. Sea Turtle Villa is ideal for guests who want more than just a beach stay. Guests can enjoy nearby pickleball and padel courts, snorkeling, diving, beach walks, gym access at the Roatan Athletic Club at Infinity Bay, spa options nearby, rooftop hot tub evenings, and easy walkability throughout West Bay.' },
+  { category: 'Evenings at Sea Turtle Villa', q: 'What is the villa like at night?', a: 'Many guests tell us evenings become their favorite part of the stay. After a day at West Bay Beach, relax in the rooftop hot tub, enjoy the illuminated pool, unwind in the hammocks beneath the stars, or gather for patio BBQ’s and games in the peaceful tropical atmosphere around the villa.' },
+  { category: 'Travel Planning', q: 'How does airport transportation work?', a: 'Many guests choose to arrange airport transportation with our recommended local driver, Christian. He typically meets guests just outside customs, helps with luggage, provides a comfortable ride to West Bay, and can stop at Eldon’s Supermarket on the way so you can stock the villa before arriving. It is the same arrival routine our family uses every time we visit.' },
   { category: 'Villa Comfort', q: 'How many guests can Sea Turtle Villa sleep?', a: 'The villa includes one king bedroom with two pack n plays, one bedroom with two queen beds, one smaller bedroom with a double bed, and a queen-size sofa bed. There are four full bathrooms, including three en-suite bathrooms plus one hallway bathroom.' },
   { category: 'Villa Comfort', q: 'Is there air conditioning?', a: 'Yes. Sea Turtle Villa has multi-zoned A/C so guests can keep the main living areas and bedrooms comfortable throughout their stay.' },
   { category: 'Villa Comfort', q: 'How fast is the WiFi?', a: 'The villa uses Starlink WiFi and typically sees 100+ Mbps speeds, making it a strong fit for streaming, remote work, video calls, and families with multiple devices.' },
   { category: 'Villa Comfort', q: 'Is there a washer and dryer?', a: 'Yes. The villa has a washer and dryer, which is especially helpful for longer stays, beach days, and family travel.' },
   { category: 'Villa Comfort', q: 'Are the outlets American-style?', a: 'Yes. There are lots of American-style power outlets throughout the villa.' },
+  { category: 'Villa Comfort', q: 'Is the kitchen fully equipped?', a: 'Yes. The kitchen is designed for real family use, from quick breakfasts to easy dinners. Guests have access to a full kitchen plus useful appliances including a Ninja coffee maker, toaster, blender, and Breville juicer — perfect for coffee, smoothies, fresh island fruit, and longer stays.', image: '/images/local/kitchen-appliance-lineup.jpg', imageAlt: 'Kitchen appliances available at Sea Turtle Villa including coffee maker, toaster, juicer and blender' },
+  { category: 'Villa Comfort', q: 'Is coffee available?', a: 'Yes. The villa includes a full-size Ninja coffee maker for relaxed mornings before beach walks, pool time, or island adventures.', image: '/images/local/ninja-coffee-maker.jpg', imageAlt: 'Ninja coffee maker at Sea Turtle Villa' },
+  { category: 'Villa Comfort', q: 'Can we make smoothies or fresh juice?', a: 'Yes. The kitchen includes a blender and Breville juicer, which guests love for fresh fruit smoothies, juice, and easy island breakfasts.', image: '/images/local/breville-juicer.jpg', imageAlt: 'Breville juicer available in the Sea Turtle Villa kitchen' },
+  { category: 'Family Travel', q: 'What baby and toddler equipment is available?', a: 'We travel with young children ourselves and understand the details that make family vacations easier. Sea Turtle Villa includes pack-n-plays, a baby bathtub, white noise machines, stair railings, carpeted stairs, and family-friendly spaces designed to help parents travel with confidence.', image: '/images/local/baby-gear-packnplay-bathtub.jpg', imageAlt: 'Pack-n-play and baby bathtub available for families at Sea Turtle Villa' },
   { category: 'Location & Access', q: 'Is there dedicated parking?', a: 'Yes. Sea Turtle Villa has dedicated parking directly in front of the villa, located inside the gated Ocean One area.' },
   { category: 'Location & Access', q: 'Is the area safe?', a: 'Roatan has 24/7 Bulldog security, and Sea Turtle Villa is inside a gated area. We have not received a single guest complaint about safety.' },
-  { category: 'Location & Access', q: 'Are there grocery stores nearby?', a: 'Yes. There is a grocery option right outside the front door across the street, with additional grocery and convenience options nearby.' },
-  { category: 'Resort Amenities', q: 'Do guests get Paradise Beach Resort amenities?', a: 'Yes. Sea Turtle Villa is part of Ocean One Villas, connected with Paradise Beach Hotel, and guests receive Paradise Beach amenities as part of their stay. Amenities include beach access, pools and tropical gardens, restaurants, bars, live music, massage room, rooftop gym, terrace pool, dive center, tours, and activities.' },
+  { category: 'Location & Access', q: 'Do we need a rental car?', a: 'Most guests find they do not need a rental car for a classic West Bay stay. With airport transportation through Christian, a full grocery stop at Eldon’s on arrival, West Bay Mall, markets, pharmacy services, medical care, restaurants, beach access, water taxis, pickleball, padel, fitness, spa options, snorkeling, and resort amenities nearby, daily vacation life is very walkable.' },
+  { category: 'Location & Access', q: 'Where should we buy groceries and essentials?', a: 'For a full grocery run, we recommend stopping at Eldon’s Supermarket with Christian during your airport transfer before arriving at the villa. During your stay, West Bay Mall, Fresco Market, and multiple additional grocery-style markets are directly across the street or very close by for snacks, beverages, fresh foods, toiletries, breakfast items, and everyday vacation essentials.', image: '/images/local/fresco-market.jpg', imageAlt: 'Fresco Market near Sea Turtle Villa in West Bay Roatan' },
+  { category: 'Location & Access', q: 'Is there a pharmacy nearby?', a: 'Yes. MediPlus Pharmacy has a West Bay location near the villa, offering a convenient option for pharmaceutical needs and everyday wellness items during your stay.' },
+  { category: 'Location & Access', q: 'Is medical care available nearby?', a: 'Yes. Roatan Clinic International Care Unit is located inside West Bay Mall, directly across the street from Sea Turtle Villa. While we hope guests never need medical care during vacation, families, grandparents, and active travelers often appreciate the peace of mind of having a clinic nearby.' },
+  { category: 'Food & Dining', q: 'Are restaurants nearby?', a: 'Yes. There are many restaurants nearby in the West Bay area, including resort dining, walkable beach restaurants, and local options such as Kristi’s Island Kitchen across the street near West Bay Mall.', image: '/images/local/kristis-island-kitchen.jpg', imageAlt: 'Kristi’s Island Kitchen near West Bay Mall in Roatan' },
+  { category: 'Wellness & Fitness', q: 'What wellness and spa options are nearby?', a: 'Guests have several nearby ways to relax and recharge. Serenity Day Spa is across the street, and Kao Kamasa Spa at the Kimpton Grand Roatán Resort & Spa is less than half a mile away for massage, facials, couples experiences, and elevated wellness treatments.', image: '/images/local/serenity-day-spa.jpg', imageAlt: 'Serenity Day Spa near Sea Turtle Villa in West Bay Roatan' },
+  { category: 'Wellness & Fitness', q: 'Is there a fitness center nearby?', a: 'Yes. The Roatan Athletic Club at Infinity Bay is nearby and gives active travelers a convenient fitness option close to the villa. It pairs perfectly with beach walks, snorkeling, pickleball, padel, spa treatments, and rooftop hot tub recovery.' },
+  { category: 'Resort Amenities', q: 'Do guests get Paradise Beach Resort amenities?', a: 'Yes. Sea Turtle Villa is part of Ocean One Villas, connected with Paradise Beach Hotel, and guests receive Paradise Beach amenities as part of their stay. Amenities include beach access, pools and tropical gardens, restaurants, bars, live music, massage room, rooftop gym, terrace pool, dive center, tours, and activities.', image: '/images/local/paradise-beach-hotel-entrance.jpg', imageAlt: 'Paradise Beach Hotel entrance near Sea Turtle Villa' },
   { category: 'Resort Amenities', q: 'Is there private beach access?', a: 'Yes. Guests have roped-off/private beach access. Wear your wristband for access to Paradise Beach amenities and beach areas.' },
   { category: 'Resort Amenities', q: 'What pools can guests use?', a: 'Guests have access to the private Ocean One pool plus the Paradise Beach Resort pool areas.' },
   { category: 'Resort Amenities', q: 'Are padel and pickleball available nearby?', a: 'Yes. Roatan Padel Club and Roatan Pickleball Club are right next door at Paradise Beach Resort, with two new padel courts and two new pickleball courts. Access details, reservations, and fees should be confirmed locally.' },
-  { category: 'Travel Planning', q: 'Can airport transportation be arranged?', a: 'Yes. Airport transfer can be arranged with Christian by WhatsApp at +504 9840-1482. The guide notes around $40 one way before tip for four or fewer people, with cash preferred and PayPal also an option.' },
-  { category: 'Travel Planning', q: 'Are restaurants nearby?', a: 'Yes. There are many restaurants nearby in the West Bay area, including resort dining and walkable beach restaurants. We plan to add a curated restaurant map and guide as the website evolves.' },
-  { category: 'Travel Planning', q: 'Is snorkeling good nearby?', a: 'Yes. West Bay is widely known as one of Roatan’s best snorkeling areas, with reef access from shore and colorful marine life close to the beach. It is one of the major reasons guests love this part of the island.' },
+  { category: 'Things To Do', q: 'Is snorkeling or diving good nearby?', a: 'Yes. West Bay is widely known as one of Roatan’s best snorkeling areas, with reef access from shore and colorful marine life close to the beach. Paradise Beach Divers is also nearby for guests interested in scuba diving, snorkeling trips, certifications, or underwater adventures.', image: '/images/local/paradise-beach-divers.jpg', imageAlt: 'Paradise Beach Divers near Sea Turtle Villa in West Bay' },
+  { category: 'Things To Do', q: 'What are some fun family photo opportunities nearby?', a: 'One of our favorite easy vacation memories is stopping by the big “I Love Roatan” chair near Paradise Beach. It is a fun family photo spot and a simple way to capture the island side of the trip.', image: '/images/local/i-love-roatan-chair.jpg', imageAlt: 'I Love Roatan chair near Paradise Beach in West Bay' },
   { category: 'Things To Do', q: 'What is a recommended nearby hike?', a: 'One favorite nearby option is an adventurous ~3-mile walking route that starts at the orange marker — the front door of Sea Turtle Villa — and ends at the blue marker. The steepest part is the first 0.3 miles. It is a great way to enjoy both sides of this lovely island in one adventurous hour of walking.', image: '/images/villa/recommended-hike.png', imageAlt: 'Marked 3-mile recommended hike near Sea Turtle Villa in Roatan' },
   { category: 'Booking', q: 'What is the minimum stay?', a: 'Minimum stay may be as low as one night during low season. During peak season, especially December through April, minimum stays may be higher.' },
   { category: 'Booking', q: 'What is the cancellation policy for direct bookings?', a: 'For direct bookings at Sea Turtle Villa, payments are generally flexible and can be applied toward a future stay if plans change. If you cancel after payment, your reservation amount may be kept as credit toward a future stay within 12 months of the original reservation date. For cancellations made within 14 days of arrival during low or mid season, or within 45 days of arrival during high season, the cost of one night will be charged; any remaining balance can still be used as future-stay credit within 12 months at the applicable seasonal rate. No-shows are charged the full reservation amount regardless of season. For questions or special circumstances, please contact us directly at seaturtlevillaroatan@gmail.com.' },
   { category: 'Booking', q: 'What is the check-in process?', a: 'The check-in process is being finalized for the website. Guests generally check in through the Paradise Beach / Ocean One office and receive wristbands for resort amenities.' },
 ];
-
 function TurtleMark({ small=false }: { small?: boolean }) {
   return (
     <span className={small ? 'turtle-mark small' : 'turtle-mark'} aria-hidden="true">
@@ -217,6 +237,7 @@ export default function Home() {
           'https://www.seaturtlevillaroatan.com/images/villa/living-kitchen.jpg',
           'https://www.seaturtlevillaroatan.com/images/villa/pool-courtyard-alt.jpg',
           'https://www.seaturtlevillaroatan.com/images/villa/rooftop-night.jpg',
+          'https://www.seaturtlevillaroatan.com/images/local/west-bay-crystal-water.jpg',
         ],
         description: 'A modern Caribbean villa in West Bay, Roatan offering private villa comfort, Paradise Beach resort amenities, private Ocean One pool access, rooftop hot tub, Starlink WiFi, and walkable access to beaches, restaurants, snorkeling, diving, padel, and pickleball.',
         email: ownerEmail,
@@ -298,7 +319,7 @@ export default function Home() {
           <figure className="night-feature"><img src="/images/villa/night-pool-aerial.jpg" alt="Illuminated pool at Sea Turtle Villa after sunset" /><figcaption>Evening swims and poolside gathering</figcaption></figure>
           <figure><img src="/images/villa/night-pool-close.jpg" alt="Glowing pool close-up at Sea Turtle Villa at night" /><figcaption>Pool after sunset</figcaption></figure>
           <figure><img src="/images/villa/night-rooftop-hammocks.jpg" alt="Rooftop hammocks and hot tub at night" /><figcaption>Rooftop hammocks beneath the stars</figcaption></figure>
-          <figure><img src="/images/villa/night-villa-exterior.jpg" alt="Sea Turtle Villa exterior warmly lit at night" /><figcaption>Warm villa lighting after dark</figcaption></figure>
+          <figure><img src="/images/villa/night-villa-exterior.jpg" alt="Sea Turtle Villa exterior warmly lit at night" /><figcaption>Evening patio BBQ’s and games</figcaption></figure>
         </div>
       </section>
 
@@ -316,7 +337,7 @@ export default function Home() {
       <section className="intro brand-watermark">
         <TurtleMark />
         <div><p className="eyebrow">The Sea Turtle Villa Difference</p><h2>Private island living, wrapped in the ease of a resort.</h2></div>
-        <p>Stay in a spacious private villa while enjoying access to the amenities and energy of Paradise Beach Resort. It is the rare Roatan experience that blends privacy, walkability, family comfort, and resort convenience in one polished setting.</p>
+        <p>Stay in a spacious private villa while enjoying access to the amenities and energy of Paradise Beach Resort. It is the rare Roatan experience that blends privacy, walkability, family comfort, resort convenience, and everyday essentials within easy reach.</p>
       </section>
 
       <section className="highlight-grid">
@@ -327,7 +348,7 @@ export default function Home() {
       <section className="guest-love">
         <SectionHeader eyebrow="Why Guests Love Staying Here" title="Day or night, Sea Turtle Villa offers one of the most memorable vacation experiences in West Bay." text="The strongest stays are easy, beautiful, and low-stress. Sea Turtle Villa is designed around the details families and international travelers notice most." />
         <div className="guest-love-grid">
-          <article><MapPin/><h3>Walk Everywhere</h3><p>Beach, restaurants, groceries, pickleball, padel, resort amenities, and water taxis are all within a short walk.</p></article>
+          <article><MapPin/><h3>Walk Everywhere</h3><p>Beach, restaurants, West Bay Mall, Fresco Market, additional markets, Kristi’s Island Kitchen, pharmacy services, medical care, spa options, pickleball, padel, resort amenities, and water taxis are all within a short walk.</p></article>
           <article><Heart/><h3>Family-Friendly by Design</h3><p>Pack-n-plays, white noise machines, stair railings, a main-floor bedroom, and a shallow pool entry help all ages feel comfortable.</p></article>
           <article><Palmtree/><h3>Private Villa + Resort Access</h3><p>Enjoy the privacy and space of your own villa while staying connected to the amenities and energy of Paradise Beach.</p></article>
         </div>
@@ -338,16 +359,25 @@ export default function Home() {
         <div className="trust-grid">{trustFeatures.map(([title, Icon, text]: any) => <article key={title}><Icon/><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
 
+      <section className="walkable-convenience">
+        <SectionHeader eyebrow="Walkable Everyday Convenience" title="Everything you need is within easy reach." text="Sea Turtle Villa is not just close to the beach — it is positioned for easy, low-stress island living before and during your stay." />
+        <div className="convenience-grid">
+          <article><Utensils/><h3>Full grocery run on arrival</h3><p>For larger grocery shopping, we recommend stopping at Eldon’s Supermarket with Christian on the drive from the airport. It is the easiest way to stock the villa before you arrive.</p><a href={eldonsUrl} target="_blank" rel="noreferrer">Eldon’s Supermarket <ExternalLink size={14}/></a></article>
+          <article><MapPin/><h3>Markets across the street</h3><p>During your stay, West Bay Mall, Fresco Market, and additional grocery-style markets are directly across the street or close by for snacks, drinks, produce, breakfast items, toiletries, and essentials.</p><div className="mini-links"><a href={westBayMallUrl} target="_blank" rel="noreferrer">West Bay Mall <ExternalLink size={14}/></a><a href={frescoMarketUrl} target="_blank" rel="noreferrer">Fresco Market <ExternalLink size={14}/></a></div></article>
+          <article><ShieldCheck/><h3>Medical + pharmacy nearby</h3><p>Roatan Clinic International Care Unit is inside West Bay Mall, and MediPlus Pharmacy has a West Bay location nearby. Most guests never need them, but families and active travelers appreciate the peace of mind.</p><div className="mini-links"><a href={roatanClinicUrl} target="_blank" rel="noreferrer">Roatan Clinic <ExternalLink size={14}/></a><a href={mediplusUrl} target="_blank" rel="noreferrer">MediPlus <ExternalLink size={14}/></a></div></article>
+          <article><Heart/><h3>Dining, spa + wellness</h3><p>Walk to local favorites like Kristi’s Island Kitchen, nearby spa services, Paradise Beach amenities, the Kimpton spa up the street, and the Infinity Bay fitness center.</p><div className="mini-links"><a href={kristisUrl} target="_blank" rel="noreferrer">Kristi’s <ExternalLink size={14}/></a><a href={kimptonSpaUrl} target="_blank" rel="noreferrer">Kimpton Spa <ExternalLink size={14}/></a></div></article>
+        </div>
+      </section>
 
       <section className="lifestyle-guides">
         <SectionHeader eyebrow="Local Guide" title="Discover the Sea Turtle Villa lifestyle." text="Three quick guides to help guests picture the stay: family-friendly West Bay ease, active island days, and the hidden-gem rhythm of Roatan." />
         <div className="guide-card-grid">
           <a className="guide-card" href="/roatan-family-vacation">
-            <img src="/images/villa/night-pool-close.jpg" alt="Illuminated pool at Sea Turtle Villa for family evenings" />
+            <img src="/images/villa/family-living-guide.jpg" alt="Open living and kitchen space at Sea Turtle Villa for families" />
             <div>
               <p className="eyebrow">Family Travel</p>
               <h3>Why Families Love West Bay</h3>
-              <p>Pack-n-plays, white noise machines, stair railings, a main-floor bedroom, grocery convenience, and a pool kids love.</p>
+              <p>Pack-n-plays, white noise machines, stair railings, a main-floor bedroom, walkable everyday conveniences, and a pool kids love.</p>
               <span>Read the family guide →</span>
             </div>
           </a>
@@ -361,11 +391,11 @@ export default function Home() {
             </div>
           </a>
           <a className="guide-card" href="/west-bay-roatan">
-            <img src="/images/villa/night-pool-aerial.jpg" alt="Sea Turtle Villa illuminated pool and West Bay evening atmosphere" />
+            <img src="/images/villa/west-bay-arrival-guide.jpg" alt="Sea Turtle Villa exterior arrival in West Bay Roatan" />
             <div>
               <p className="eyebrow">West Bay Guide</p>
               <h3>Experience West Bay Like a Local</h3>
-              <p>Stay and Play in West Bay. Move and Groove in West End. Beach days, water taxis, hikes, groceries, and easy island rhythm.</p>
+              <p>Stay and Play in West Bay. Move and Groove in West End. Beach days, water taxis, hikes, walkable markets, and easy island rhythm.</p>
               <span>Read the West Bay guide →</span>
             </div>
           </a>
@@ -404,7 +434,7 @@ export default function Home() {
         <div className="amenity-cards">
           <article><Waves/><h3>Beach & Resort</h3><p>Roped-off/private beach access, resort pools, tropical gardens, restaurants, bars, live music, terrace pool, spa/massage room, rooftop gym, dive center, tours, and activities.</p><ButtonLink href={paradiseUrl} variant="secondary">Paradise Beach Hotel</ButtonLink></article>
           <article><Dumbbell/><h3>Padel & Pickleball</h3><p>Brand-new Roatan Padel Club and Roatan Pickleball Club courts are next door — a unique active-travel amenity for families and groups.</p><a className="amenity-link" href={padelInstagramUrl} target="_blank" rel="noreferrer">Follow Roatan Padel Club <ExternalLink size={14}/></a></article>
-          <article><MapPin/><h3>West Bay Convenience</h3><p>Walkable access to beach days, restaurants, snorkeling, local shops, groceries, resort services, and classic Roatan vacation experiences.</p><a className="amenity-link" href={westBayMapUrl} target="_blank" rel="noreferrer">View Sea Turtle Villa on Google Maps <ExternalLink size={14}/></a></article>
+          <article><MapPin/><h3>West Bay Convenience</h3><p>Walkable access to beach days, restaurants, snorkeling, West Bay Mall, Fresco Market, neighborhood markets, Kristi’s Island Kitchen, pharmacy services, medical care, spa options, resort services, and classic Roatan vacation experiences.</p><a className="amenity-link" href={westBayMapUrl} target="_blank" rel="noreferrer">View Sea Turtle Villa on Google Maps <ExternalLink size={14}/></a><a className="amenity-link" href={westBayMallUrl} target="_blank" rel="noreferrer">West Bay Mall <ExternalLink size={14}/></a></article>
         </div>
         <div className="courts-grid"><img src="/images/amenities/courts-01.jpg" alt="Roatan padel court"/><img src="/images/amenities/courts-03.jpg" alt="Roatan pickleball and padel courts"/><img src="/images/amenities/courts-05.jpg" alt="Roatan Padel Club lounge"/><img src="/images/amenities/courts-07.jpg" alt="Roatan pickleball courts at Paradise Beach Resort"/><img src="/images/amenities/courts-10.jpg" alt="Pickleball courts near Sea Turtle Villa"/><img src="/images/amenities/courts-12.jpg" alt="Roatan Pickleball Club courts"/></div>
       </section>
@@ -416,7 +446,7 @@ export default function Home() {
           <p>Guests love being close to the beach, reef, restaurants, pools, and resort energy. West Bay is widely recognized for shore-access snorkeling, calm-water entry points, and colorful reef experiences close to the sand.</p>
           <div className="snorkel-links"><a href="https://www.snorkeling-report.com/destination/snorkeling-honduras/" target="_blank" rel="noreferrer">Snorkeling Report guide <ExternalLink size={14}/></a><a href="https://www.islandhouseroatan.com/things-to-do/roatan-snorkeling/" target="_blank" rel="noreferrer">Roatan snorkeling guide <ExternalLink size={14}/></a></div>
         </div>
-        <img src="/images/villa/pool-courtyard-alt.jpg" alt="Pool courtyard near West Bay beach life" />
+        <img src="/images/local/west-bay-crystal-water.jpg" alt="Crystal-clear water at West Bay Beach near Sea Turtle Villa" />
       </section>
 
       <section id="faq" className="faq-section">
