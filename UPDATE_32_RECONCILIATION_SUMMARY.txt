@@ -1,0 +1,59 @@
+Sea Turtle Villa Update 32 - Reconciliation / Catch-Up Release
+
+Purpose:
+This release reconciles the missed Update 31 items and verifies that the requested homepage, FAQ, guide, review, image, and media updates are present in one clean package.
+
+Verified corrections included:
+1. Pool After Sunset photo
+   - Uses the actual uploaded nighttime villa/pool photo.
+   - Caption remains "Pool after sunset".
+   - Caption is positioned bottom-right so it does not cover the pool.
+   - No AI-generated image is used.
+
+2. Dining, spa + wellness box
+   - Adds Infinity Bay Athletic Club to the homepage "Dining, spa + wellness" box.
+   - Uses the requested link: https://www.infinitybay.com/wellness
+
+3. Local Guides heading
+   - Changes "Local Guide" to "Local Guides".
+
+4. Starlink FAQ assets
+   - Adds the actual uploaded 100 Mbps speed-test screenshot to the WiFi FAQ.
+   - Adds the actual uploaded Starlink speed demo video to the WiFi FAQ.
+
+5. Baby/toddler FAQ and Family Guide photo
+   - Uses a wider/zoomed-out actual baby-gear photo showing the baby bathtub.
+   - Mentions baby bathtub and smoke/carbon monoxide detectors.
+
+6. Sarah Airbnb review
+   - Adds Sarah's new 5-star Airbnb review near the top of the homepage reviews section.
+   - Includes the key details: better than expected, nicer furnishings, daily housekeeping, Luis responsiveness, pool maintenance, Paradise Beach beach chairs/gym/amenities, and family stay.
+
+7. Family Vacation Guide details
+   - Adds baby bathtub and smoke/carbon monoxide detectors.
+   - Adds towel/towel-hook practical family detail.
+   - Adds hair dryer, cleaning products, shampoo, conditioner, body wash, hangers, extra pillows, room-darkening blinds, safe, clothes storage, Roku TVs, dishwasher, rice cooker, sundeck access from Bedrooms 1 and 2, and long-term stays of 28+ nights.
+
+8. Pickleball & Padel Guide
+   - Uses the actual uploaded Infinity Bay Athletic Club gym photo.
+   - Uses the actual uploaded Paradise Beach playground photo.
+   - Keeps Serenity Day Spa image wider/object-contained so the sign is visible.
+   - Adds Infinity Bay wellness link where relevant.
+
+9. FAQ additions
+   - Adds Paradise Beach Resort amenities with actual resort pool photo.
+   - Adds check-in / guest services FAQ with actual Paradise Beach Hotel entrance photo.
+   - Adds playground FAQ with actual playground photo.
+   - Adds active traveler / fitness FAQ with actual gym photo.
+   - Adds everyday amenities FAQ.
+   - Adds long-term stays FAQ.
+
+10. Guide system
+   - Preserves new Getting to Roatan guide.
+   - Preserves new Points & Miles guide.
+   - Preserves bottom guide-to-guide navigation.
+
+Packaging notes:
+- No node_modules, .next, dist, or build artifacts included.
+- All newly used visual assets are user-uploaded/actual property or local photos/video.
+- No AI-generated imagery included in the project package.

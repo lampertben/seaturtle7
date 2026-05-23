@@ -106,13 +106,24 @@ export default function Page() {
       </section>
 
       <section className="seo-split reverse">
-        <img src="/images/villa/night-pool-villa-glow.jpg" alt="Evening pool glow at Sea Turtle Villa after arrival day" />
+        <img src="/images/local/paradise-beach-checkin-entrance.jpg" alt="Paradise Beach Hotel check-in entrance for Sea Turtle Villa guests" />
+        <div>
+          <p className="eyebrow">Arrival & Check-In</p>
+          <h2>Villa privacy, backed by resort hospitality.</h2>
+          <p>Guests staying at Sea Turtle Villa check in through the Paradise Beach Resort hospitality desk. The resort team can help with arrival, questions, local guidance, and guest-service needs throughout the stay.</p>
+          <p>That support is a major part of the Sea Turtle Villa experience: the privacy of a villa with the convenience of professional hospitality nearby.</p>
+        </div>
+      </section>
+
+
+      <section className="seo-split">
         <div>
           <p className="eyebrow">Do You Need a Rental Car?</p>
           <h2>For many West Bay stays, probably not.</h2>
           <p>If your goal is beach, pool, restaurants, resort amenities, water taxis, diving, pickleball, padel, spa, fitness, and convenient essentials, Sea Turtle Villa’s location keeps the trip very walkable.</p>
           <p>Some guests still choose a rental car for island-wide exploring, but many families prefer airport transportation and simple local plans from West Bay.</p>
         </div>
+        <img className="seo-side-image" src="/images/local/paradise-beach-resort-pool.jpg" alt="Paradise Beach Resort pool available to Sea Turtle Villa guests" />
       </section>
 
       <section className="seo-grid-3">

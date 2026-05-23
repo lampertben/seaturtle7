@@ -1,0 +1,52 @@
+Sea Turtle Villa Update 31 – Full polishing pass
+
+Built from Update 30 and incorporates Ben's latest review notes and newly provided real photo/video assets only. No AI-generated images are used.
+
+Homepage / Global
+- Replaced the After Dark “Pool after sunset” image with Ben's uploaded nighttime villa/pool photo.
+- Moved the “Pool after sunset” caption to the lower-right overlay position so it does not cover the pool reflections.
+- Changed “Local Guide” to “Local Guides.”
+- Added Infinity Bay Athletic Club to the Dining, Spa + Wellness mini-links using https://www.infinitybay.com/wellness.
+- Added Sarah's new 5-star Airbnb family review near the top of the review section.
+- Added FAQ support for video assets.
+- Added new FAQ content and actual photos/video for:
+  - Paradise Beach Resort amenity access
+  - Check-in through Paradise Beach Resort hospitality desk
+  - Fitness / Infinity Bay Athletic Club
+  - Playground for kids at Paradise Beach Resort
+  - Starlink internet reliability and remote work
+
+Family Vacation Guide
+- Added baby bathtub and multiple Smoke/CO detector messaging.
+- Adjusted baby gear photo display to show the full pack-n-play/baby bathtub asset more clearly.
+- Added towel convenience language: villa towels, Paradise Beach beach towels, patio/interior towel hooks, and drying convenience.
+- Added broader amenity details: hair dryer, cleaning products, shampoo, conditioner, body wash, hangers, extra pillows, room-darkening blinds, safe, clothes storage, Roku TVs, Starlink, dishwasher, rice cooker, and kitchen essentials.
+- Added bedroom 1/2 balcony and large sundeck overlooking the pool language.
+- Added Paradise Beach Resort pool access photo and section.
+- Added long-term stay language for 28+ nights with inquiry CTA.
+
+Pickleball & Padel Guide
+- Adjusted Serenity Day Spa photo display to show more of the sign.
+- Replaced “Stay Active Beyond the Courts” imagery with Ben's uploaded Infinity Bay Athletic Club gym photo and Paradise Beach playground photo.
+- Updated Infinity Bay Athletic Club link to https://www.infinitybay.com/wellness.
+- Updated active-travel copy to include family-friendly resort amenities and playground.
+- Updated evening relaxation image to the new real nighttime villa/pool photo.
+
+West Bay Guide
+- Added Infinity Bay Athletic Club gym photo to the dining/spa/wellness visual block.
+- Updated related copy to include fitness and wellness more clearly.
+- Updated Infinity Bay link to https://www.infinitybay.com/wellness.
+
+Getting to Roatan Guide
+- Added Paradise Beach Resort check-in / hospitality desk visual and copy.
+- Added resort hospitality positioning: private villa living with resort support.
+- Added Paradise Beach Resort pool photo to rental-car/walkability section.
+
+Assets Added
+- night-pool-villa-after-sunset.jpg
+- infinity-bay-athletic-club-gym.jpg
+- paradise-beach-playground.jpg
+- paradise-beach-resort-pool.jpg
+- paradise-beach-checkin-entrance.jpg
+- starlink-speed-test-100mbps.png
+- starlink-speed-demo.mp4

@@ -1,0 +1,7 @@
+Sea Turtle Villa Update 31B Hotfix
+
+Corrected the After Dark / Pool after sunset homepage item:
+- Re-copied Ben's uploaded original night villa/pool photo into the site assets.
+- Added explicit figure/caption classes so the caption is pinned to the bottom-right.
+- Added stronger CSS overrides so the caption no longer stretches across the image or covers the pool.
+- No AI-generated images were used.
