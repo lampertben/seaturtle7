@@ -1,3 +1,5 @@
+import GuideExplore from '../GuideExplore';
+
 export const metadata = {
   title: 'Roatan Family Vacation Villa | Sea Turtle Villa',
   description: 'A family-friendly Roatan villa in West Bay with pack-n-plays, baby bathtub, white noise machines, main-floor bedroom, shallow pool area, nearby pharmacy, medical care, and easy beach access.',
@@ -88,11 +90,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="seo-cta">
-        <h2>Planning Roatan with kids?</h2>
-        <p>Ask us about family setup, baby gear, sleeping arrangements, pool layout, airport grocery stops, and what to expect in West Bay.</p>
-        <a className="btn" href="/">Explore the villa</a>
-      </section>
+      <GuideExplore current="/roatan-family-vacation" heading="Planning Roatan with kids?" text="Explore the villa setup, arrival logistics, West Bay walkability, and active island options so the trip feels easy before you arrive." />
     </main>
   );
 }

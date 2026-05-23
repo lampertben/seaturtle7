@@ -1,3 +1,5 @@
+import GuideExplore from '../GuideExplore';
+
 export const metadata = {
   title: 'West Bay Roatan Guide | Sea Turtle Villa',
   description: 'A practical guide to staying in West Bay, Roatan near Sea Turtle Villa: beach access, dining, markets, West Bay Mall, pharmacy, medical care, spa, fitness, diving, water taxis, and walkability.',
@@ -124,11 +126,7 @@ export default function Page() {
         {nearby.map((item) => <article key={item}><h3>{item}</h3><p>Another reason West Bay feels simple, walkable, and easy to enjoy from Sea Turtle Villa.</p></article>)}
       </section>
 
-      <section className="seo-cta">
-        <h2>Want an easy West Bay home base?</h2>
-        <p>Sea Turtle Villa keeps the beach, daily essentials, dining, wellness, fitness, diving, and water taxis close — while giving you a private villa to return to.</p>
-        <a className="btn" href="/">Explore the villa</a>
-      </section>
+      <GuideExplore current="/west-bay-roatan" heading="Ready to plan the rest of the trip?" text="Pair the West Bay guide with family travel, flights, points-and-miles ideas, and the villa overview to see how the whole stay comes together." />
     </main>
   );
 }

@@ -10,5 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/west-bay-roatan`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${siteUrl}/roatan-family-vacation`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${siteUrl}/roatan-pickleball-padel-vacation`, lastModified, changeFrequency: 'monthly', priority: 0.75 },
+    { url: `${siteUrl}/getting-to-roatan`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${siteUrl}/roatan-points-and-miles`, lastModified, changeFrequency: 'monthly', priority: 0.72 },
   ];
 }

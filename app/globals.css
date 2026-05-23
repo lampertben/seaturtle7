@@ -258,3 +258,13 @@
 .guide-link-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .guide-link-row .btn{margin:0}
 @media(max-width:720px){.guide-link-row{flex-direction:column}.guide-link-row .btn{width:100%;justify-content:center}}
+
+/* Update 30: guide ecosystem navigation + travel planning guides */
+.guide-card-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.guide-explore{text-align:left!important}
+.guide-explore h2,.guide-explore p{max-width:820px;margin-left:auto;margin-right:auto;text-align:center}
+.guide-explore-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:30px auto 0;max-width:980px}
+.guide-explore-grid .btn{justify-content:center;min-height:66px;flex-direction:column;gap:4px;text-align:center;line-height:1.2;white-space:normal}
+.guide-explore-grid .btn span{font-size:10px;letter-spacing:.14em;opacity:.78}
+.seo-callout strong{font-weight:900;color:var(--ink)}
+@media(max-width:640px){.guide-explore-grid{grid-template-columns:1fr}.guide-explore-grid .btn{width:100%}}

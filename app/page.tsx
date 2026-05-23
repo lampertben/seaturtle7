@@ -370,7 +370,7 @@ export default function Home() {
       </section>
 
       <section className="lifestyle-guides">
-        <SectionHeader eyebrow="Local Guide" title="Discover the Sea Turtle Villa lifestyle." text="Three quick guides to help guests picture the stay: family-friendly West Bay ease, active island days, and the hidden-gem rhythm of Roatan." />
+        <SectionHeader eyebrow="Local Guide" title="Discover the Sea Turtle Villa lifestyle." text="Five quick guides to help guests picture the full stay: family-friendly West Bay ease, active island days, arrival logistics, points-and-miles planning, and the hidden-gem rhythm of Roatan." />
         <div className="guide-card-grid">
           <a className="guide-card" href="/roatan-family-vacation">
             <img src="/images/villa/family-living-guide.jpg" alt="Open living and kitchen space at Sea Turtle Villa for families" />
@@ -397,6 +397,24 @@ export default function Home() {
               <h3>Experience West Bay Like a Local</h3>
               <p>Stay and Play in West Bay. Move and Groove in West End. Beach days, water taxis, hikes, walkable markets, and easy island rhythm.</p>
               <span>Read the West Bay guide →</span>
+            </div>
+          </a>
+          <a className="guide-card" href="/getting-to-roatan">
+            <img src="/images/local/west-bay-beach-dock.jpg" alt="West Bay Beach dock and turquoise water for Roatan arrival planning" />
+            <div>
+              <p className="eyebrow">Flights & Arrival</p>
+              <h3>Getting to Roatan Is Easier Than You Think</h3>
+              <p>Direct and one-stop flight planning, airport transfer tips, grocery-stop strategy, and what to expect when you land at RTB.</p>
+              <span>Read the arrival guide →</span>
+            </div>
+          </a>
+          <a className="guide-card" href="/roatan-points-and-miles">
+            <img src="/images/local/west-bay-beach-boats.jpg" alt="Boats on West Bay Beach for Roatan points and miles travel planning" />
+            <div>
+              <p className="eyebrow">Points & Miles</p>
+              <h3>Use Airline Miles to Fly to Roatan</h3>
+              <p>A practical, beginner-friendly guide to comparing cash fares, airline miles, transfer partners, and family-friendly award travel options.</p>
+              <span>Read the points guide →</span>
             </div>
           </a>
         </div>

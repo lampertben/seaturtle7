@@ -1,3 +1,5 @@
+import GuideExplore from '../GuideExplore';
+
 export const metadata = {
   title: 'Roatan Pickleball & Padel Vacation | Sea Turtle Villa',
   description: 'Stay near brand-new pickleball and padel courts in West Bay, Roatan. Sea Turtle Villa is roughly 300 yards from courts with lights, lessons, pro shop, reservations, and tournament energy.',
@@ -89,11 +91,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="seo-cta">
-        <h2>Planning a Roatan pickleball or padel trip?</h2>
-        <p>Ask us about court proximity, family travel, group stays, and future Stay & Play opportunities.</p>
-        <a className="btn" href="/">Explore the villa</a>
-      </section>
+      <GuideExplore current="/roatan-pickleball-padel-vacation" heading="Planning an active Roatan escape?" text="Explore flights, West Bay walkability, family comfort, and the villa experience around your court time, beach time, and recovery time." />
     </main>
   );
 }

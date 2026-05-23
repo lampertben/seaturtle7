@@ -1,0 +1,29 @@
+Update 30 — Travel Planning Guide Expansion
+
+What changed:
+- Restored and upgraded bottom-of-guide navigation across all guide pages.
+- Added a shared guide navigation component so each guide now cross-links to the villa overview and other planning guides.
+- Added new guide page: /getting-to-roatan
+  - Flights and arrival planning
+  - RTB airport guidance
+  - U.S. and Canada gateway city overview
+  - Christian airport transfer + Eldon's grocery stop strategy
+  - Rental car guidance
+  - Packing tips
+  - Arrival FAQs
+- Added new guide page: /roatan-points-and-miles
+  - Beginner-friendly airline miles strategy
+  - United, Aeroplan, American, and Delta planning framework
+  - Transferable points guidance
+  - Family award-travel tips
+  - Search strategy and cautions
+- Added both new guides to the homepage guide card section.
+- Updated sitemap with the two new guide URLs.
+- Added CSS for the new guide navigation and responsive guide-card grid.
+
+Notes:
+- No AI-generated images were added.
+- Existing uploaded/local villa and West Bay photography was reused.
+- No major homepage redesign was performed.
+- Existing inquiry flow and Formspree/Ocean One booking workflow were preserved.
+- Flight and points content is intentionally written as evergreen planning guidance because airline schedules, award pricing, transfer partners, and availability can change.
