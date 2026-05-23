@@ -1,0 +1,22 @@
+Sea Turtle Villa Update 33 — Points & Miles Guide Correction
+
+Scope:
+- Targeted correction to the Roatan Points & Miles Guide only.
+- No AI-generated imagery.
+- No broad site redesign.
+
+Changes made:
+- Replaced interior/home-focused guide photos with more relevant travel, arrival, resort, family, and aspirational villa imagery.
+- Replaced the Transferable Points image with West Bay arrival-oriented imagery.
+- Replaced the Family Award Travel baby gear image with the Paradise Beach playground image.
+- Replaced the final arrival-planning image with the night villa/pool image for a stronger aspirational close.
+- Replaced repeated “Keep in mind” caution headings with specific headings:
+  - Award Availability
+  - Seasonal Schedules
+  - Extra Fees
+  - Family Convenience
+  - Group Travel
+
+Verification notes:
+- Confirmed the previous live/source Points & Miles Guide still had repeated “Keep in mind” headings and interior/baby gear/grocery images.
+- Confirmed those items are changed in app/roatan-points-and-miles/page.tsx in this package.
