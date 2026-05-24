@@ -56,7 +56,7 @@ export default function Page() {
       </section>
 
       <section className="seo-split reverse">
-        <img src="/images/local/serenity-day-spa.jpg" alt="Serenity Day Spa near Sea Turtle Villa for recovery and relaxation" />
+        <img className="object-contain-photo" src="/images/local/serenity-day-spa.jpg" alt="Serenity Day Spa sign near Sea Turtle Villa for recovery and relaxation" />
         <div>
           <p className="eyebrow">Recover</p>
           <h2>Spa, pool, rooftop, repeat.</h2>
@@ -73,17 +73,20 @@ export default function Page() {
           <p className="eyebrow">Train</p>
           <h2>Stay active beyond the courts.</h2>
           <p>Guests can also work out at Infinity Bay Athletic Club, snorkel from West Bay Beach, book diving nearby, walk the beach, or hike from the villa area.</p>
-          <p>It is an easy active-lifestyle base without sacrificing comfort or convenience.</p>
+          <p>Families traveling with players also appreciate Paradise Beach Resort amenities, including a small playground area and shaded resort spaces for younger kids.</p>
           <div className="guide-link-row">
-            <a className="btn secondary" href="https://www.infinitybay.com/explore/roatan-athletic-club" target="_blank" rel="noreferrer">Infinity Bay Athletic Club</a>
+            <a className="btn secondary" href="https://www.infinitybay.com/wellness" target="_blank" rel="noreferrer">Infinity Bay Athletic Club</a>
             <a className="btn secondary" href="https://www.instagram.com/padelroatan/" target="_blank" rel="noreferrer">Roatan Padel Club</a>
           </div>
         </div>
-        <img className="seo-side-image" src="/images/local/paradise-beach-divers.jpg" alt="Paradise Beach Divers near Sea Turtle Villa for active island days" />
+        <div className="seo-photo-pair">
+          <img src="/images/local/infinity-bay-athletic-club-gym.jpg" alt="Infinity Bay Athletic Club gym near Sea Turtle Villa" />
+          <img src="/images/local/paradise-beach-playground.jpg" alt="Small playground at Paradise Beach Resort for kids" />
+        </div>
       </section>
 
       <section className="seo-split reverse">
-        <img src="/images/villa/night-pool-close.jpg" alt="Evening pool relaxation at Sea Turtle Villa after active West Bay days" />
+        <img src="/images/villa/night-pool-villa-after-sunset.jpg" alt="Evening pool relaxation at Sea Turtle Villa after active West Bay days" />
         <div>
           <p className="eyebrow">Relax</p>
           <h2>The best active days end back at the villa.</h2>

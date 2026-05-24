@@ -1,0 +1,17 @@
+Sea Turtle Villa Update 34 - Review Funnel Integration
+
+Website additions:
+- Added /review route as a private guest review funnel.
+- Matched the route styling to the existing Sea Turtle Villa brand system, colors, typography, buttons, and villa/local photography.
+- Added routing for Airbnb guests with clear language that Airbnb reviews are only available to eligible completed Airbnb reservations.
+- Added direct/Ocean One/other guest testimonial and feedback form flow using the existing Formspree endpoint.
+- Added private-feedback path for guests who select "Needs Improvement."
+- Added mobile-first styling, loading/error form states, and spam honeypot field.
+- Added /review to sitemap with low priority and noindex page metadata.
+
+Physical signage:
+- Physical QR/signage files are intentionally kept out of this website deploy ZIP.
+- Use the separate print/signage package for print-shop-ready files.
+
+Deployment note:
+- Upload this clean website ZIP to the existing GitHub repo connected to the current Vercel project.

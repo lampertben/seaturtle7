@@ -85,13 +85,13 @@ export default function Page() {
       <section className="seo-image-band three">
         <img src="/images/local/kristis-island-kitchen.jpg" alt="Kristi's Island Kitchen near Sea Turtle Villa" />
         <img src="/images/local/serenity-day-spa.jpg" alt="Serenity Day Spa near Sea Turtle Villa" />
-        <img src="/images/local/paradise-beach-divers.jpg" alt="Paradise Beach Divers near West Bay Beach" />
+        <img src="/images/local/infinity-bay-athletic-club-gym.jpg" alt="Infinity Bay Athletic Club near West Bay" />
       </section>
 
       <section className="seo-grid-3">
         <article><h3>Dining nearby</h3><p>Kristi’s Island Kitchen is one of the easy nearby options for a casual meal without making the night complicated.</p></article>
         <article><h3>Spa nearby</h3><p>Serenity Day Spa is close by for massages, body treatments, manicures, pedicures, and relaxed vacation recovery.</p></article>
-        <article><h3>Diving & snorkeling</h3><p>Paradise Beach Divers is nearby for underwater adventures, certifications, and dive planning in one of the Caribbean’s best reef destinations.</p></article>
+        <article><h3>Fitness & wellness</h3><p>Infinity Bay Athletic Club gives active guests a nearby gym and wellness option during longer stays, pickleball trips, and family vacations.</p></article>
       </section>
 
       <section className="seo-split">
@@ -115,7 +115,7 @@ export default function Page() {
           <h2>Beach, gym, spa, diving, pickleball, and padel all fit into the same trip.</h2>
           <p>Guests who like to stay active can work out at Infinity Bay Athletic Club, play nearby pickleball or padel, snorkel from West Bay Beach, schedule a spa treatment, or book a dive outing nearby.</p>
           <div className="guide-link-row">
-            <a className="btn secondary" href="https://www.infinitybay.com/explore/roatan-athletic-club" target="_blank" rel="noreferrer">Infinity Bay Athletic Club</a>
+            <a className="btn secondary" href="https://www.infinitybay.com/wellness" target="_blank" rel="noreferrer">Infinity Bay Athletic Club</a>
             <a className="btn secondary" href="https://wblodgeroatan.com/serenity-day-spa/" target="_blank" rel="noreferrer">Serenity Day Spa</a>
             <a className="btn secondary" href="https://www.grandroatanresortandspa.com/us/en/kao-kamasa-spa/" target="_blank" rel="noreferrer">Kao Kamasa Spa</a>
           </div>

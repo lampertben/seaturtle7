@@ -37,11 +37,11 @@ const routes = [
 ];
 
 const cautions = [
-  'Award availability is never guaranteed.',
-  'Schedules vary by season and airline.',
-  'Taxes, fees, baggage, seat assignments, and change rules can differ by program.',
-  'The cheapest points option is not always the best family travel option.',
-  'For groups, convenience may be worth more than squeezing out the absolute lowest mileage price.',
+  ['Award Availability', 'Award availability is never guaranteed.'],
+  ['Seasonal Schedules', 'Schedules vary by season and airline.'],
+  ['Extra Fees', 'Taxes, fees, baggage, seat assignments, and change rules can differ by program.'],
+  ['Family Convenience', 'The cheapest points option is not always the best family travel option.'],
+  ['Group Travel', 'For groups, convenience may be worth more than squeezing out the absolute lowest mileage price.'],
 ];
 
 export default function Page() {
@@ -73,8 +73,8 @@ export default function Page() {
 
       <section className="seo-image-band three">
         <img src="/images/local/west-bay-crystal-water.jpg" alt="Crystal clear West Bay water after flying to Roatan" />
-        <img src="/images/villa/pool-courtyard.jpg" alt="Sea Turtle Villa pool courtyard for arrival day" />
-        <img src="/images/villa/rooftop-day.jpg" alt="Rooftop hammocks and hot tub at Sea Turtle Villa" />
+        <img src="/images/local/paradise-beach-checkin-entrance.jpg" alt="Paradise Beach Resort entrance for an easy Roatan arrival" />
+        <img src="/images/local/paradise-beach-resort-pool.jpg" alt="Paradise Beach Resort pool after flying to Roatan" />
       </section>
 
       <section className="seo-grid-3">
@@ -82,7 +82,7 @@ export default function Page() {
       </section>
 
       <section className="seo-split reverse">
-        <img src="/images/villa/main-floor-living-open.jpg" alt="Open living space at Sea Turtle Villa for family travel planning" />
+        <img src="/images/local/west-bay-villa-arrival-guide.jpg" alt="Arriving in West Bay after booking flights with points and miles" />
         <div>
           <p className="eyebrow">Transferable Points</p>
           <h2>Flexible points are usually the most useful starting point.</h2>
@@ -110,7 +110,7 @@ export default function Page() {
       </section>
 
       <section className="seo-split reverse">
-        <img src="/images/local/baby-gear-packnplay-bathtub.jpg" alt="Family gear at Sea Turtle Villa for families flying to Roatan" />
+        <img src="/images/local/paradise-beach-playground.jpg" alt="Paradise Beach playground for family trips to Roatan" />
         <div>
           <p className="eyebrow">Family Award Travel</p>
           <h2>The best deal is the one your family will actually enjoy.</h2>
@@ -132,7 +132,7 @@ export default function Page() {
       </section>
 
       <section className="seo-split reverse">
-        <img src="/images/local/fresco-market.jpg" alt="Grocery stop planning after flying to Roatan" />
+        <img src="/images/villa/night-pool-villa-after-sunset.jpg" alt="Sea Turtle Villa pool after sunset for the final night of a Roatan trip" />
         <div>
           <p className="eyebrow">After You Book Flights</p>
           <h2>Turn travel day into a simple arrival plan.</h2>
@@ -142,7 +142,7 @@ export default function Page() {
       </section>
 
       <section className="seo-grid-3">
-        {cautions.map((item) => <article key={item}><h3>Keep in mind</h3><p>{item}</p></article>)}
+        {cautions.map(([title, text]) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}
       </section>
 
       <GuideExplore current="/roatan-points-and-miles" heading="Ready to plan the trip around the flights?" text="Use the arrival guide, West Bay guide, family guide, and villa overview to turn the flight plan into a smooth Sea Turtle Villa stay." />

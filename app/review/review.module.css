@@ -1,0 +1,338 @@
+.pageShell {
+  min-height: 100vh;
+  padding: 22px 5vw 64px;
+  background:
+    linear-gradient(180deg, rgba(8, 37, 34, 0.56), rgba(8, 37, 34, 0.25)),
+    url('/images/villa/night-pool-villa-after-sunset.jpg') center top / cover fixed,
+    var(--cream);
+  color: var(--ink);
+}
+
+.topbar {
+  width: min(1040px, 100%);
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: white;
+}
+
+.brand {
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.brand small {
+  display: block;
+  font-size: 10px;
+  opacity: .82;
+  margin-top: 5px;
+}
+
+.homeLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  border-radius: 999px;
+  padding: 0 16px;
+  background: rgba(255, 250, 242, .9);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.heroCard,
+.card,
+.footerNote {
+  width: min(880px, 100%);
+  margin: 0 auto 22px;
+  border: 1px solid rgba(255, 250, 242, .46);
+  box-shadow: 0 24px 80px rgba(3, 22, 20, .22);
+  border-radius: 34px;
+  overflow: hidden;
+}
+
+.heroCard {
+  background:
+    linear-gradient(90deg, rgba(3, 22, 20, .82), rgba(3, 22, 20, .42)),
+    url('/images/villa/west-bay-crystal-water.jpg') center / cover;
+  color: white;
+}
+
+.heroCopy {
+  padding: clamp(34px, 6vw, 66px);
+}
+
+.card,
+.footerNote {
+  background: rgba(255, 250, 242, .96);
+  padding: clamp(26px, 4vw, 38px);
+}
+
+.eyebrow,
+.stepLabel {
+  margin: 0 0 12px;
+  color: var(--wood);
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.heroCard h1,
+.card h2 {
+  margin: 0 0 16px;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  line-height: .98;
+}
+
+.heroCard h1 {
+  color: white;
+  font-size: clamp(2.7rem, 7vw, 5.8rem);
+  max-width: 760px;
+}
+
+.card h2 {
+  color: var(--deep);
+  font-size: clamp(2rem, 4vw, 3.35rem);
+}
+
+.lead,
+.helpText {
+  margin: 0;
+  color: rgba(23, 52, 49, .76);
+  font-size: 1.08rem;
+  line-height: 1.72;
+}
+
+.heroCard .lead {
+  color: rgba(255, 255, 255, .86);
+  max-width: 720px;
+}
+
+.choiceGrid,
+.sourceGrid {
+  display: grid;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.choiceGrid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sourceGrid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.choiceButton,
+.sourceGrid button,
+.primaryButton,
+.secondaryButton,
+.primaryLink {
+  border-radius: 20px;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: none;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
+}
+
+.choiceButton {
+  min-height: 176px;
+  padding: 24px 18px;
+  background: white;
+  border: 1px solid rgba(23, 52, 49, .11);
+  color: var(--ink);
+  text-align: left;
+}
+
+.choiceButton:hover,
+.sourceGrid button:hover,
+.primaryLink:hover,
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 38px rgba(23, 52, 49, .14);
+}
+
+.choiceButton strong,
+.choiceButton span {
+  display: block;
+}
+
+.choiceButton strong {
+  margin: 12px 0 8px;
+  font-size: 1.22rem;
+}
+
+.choiceButton span:last-child {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.stars {
+  color: var(--wood);
+  letter-spacing: .08em;
+}
+
+.sourceGrid button,
+.secondaryButton {
+  padding: 15px 18px;
+  background: var(--sand);
+  color: var(--ink);
+  border: 1px solid rgba(23, 52, 49, .1);
+  font-weight: 850;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.primaryButton,
+.primaryLink {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 22px;
+  background: var(--coral);
+  color: white;
+  border: 0;
+  font-weight: 900;
+}
+
+.primaryButton:disabled {
+  opacity: .7;
+  cursor: wait;
+}
+
+.textButton {
+  margin-top: 20px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: #8f6532;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 900;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.form label {
+  display: grid;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 850;
+}
+
+.form label span {
+  color: rgba(23, 52, 49, .58);
+  font-weight: 650;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  border: 1px solid rgba(23, 52, 49, .16);
+  border-radius: 16px;
+  padding: 14px 15px;
+  background: #fffdf8;
+  color: var(--ink);
+  font: inherit;
+}
+
+.form textarea {
+  resize: vertical;
+}
+
+.checkboxLabel {
+  grid-template-columns: auto 1fr !important;
+  align-items: start;
+  font-weight: 700 !important;
+}
+
+.checkboxLabel input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
+.errorText {
+  margin: 0;
+  color: #8a3227;
+  font-weight: 800;
+}
+
+.footerNote {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--ink);
+  font-weight: 800;
+  box-shadow: none;
+}
+
+.footerNote p {
+  margin: 0;
+}
+
+.footerNote a {
+  color: var(--wood);
+}
+
+@media (max-width: 760px) {
+  .pageShell {
+    padding: 16px 12px 42px;
+    background-attachment: scroll;
+  }
+
+  .topbar,
+  .footerNote {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .heroCard,
+  .card,
+  .footerNote {
+    border-radius: 24px;
+  }
+
+  .choiceGrid,
+  .sourceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .choiceButton {
+    min-height: 0;
+  }
+
+  .buttonRow {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .primaryLink,
+  .secondaryButton {
+    width: 100%;
+  }
+}

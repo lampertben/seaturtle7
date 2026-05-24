@@ -12,9 +12,19 @@ const familyDetails = [
   'White noise machines',
   'Railings on stairwells',
   'Carpeted stairs',
+  'Multiple Smoke/CO detectors',
   'Main-floor bedroom with ensuite bathroom',
   'Shallow toddler-friendly pool section',
   'Pharmacy and medical care nearby',
+];
+
+const comfortDetails = [
+  'Hair dryer, shampoo, conditioner, and body wash',
+  'Cleaning products, hangers, extra pillows, and room-darkening blinds',
+  'Safe for passports and valuables, plus plenty of clothes storage',
+  'Roku TVs and reliable Starlink internet',
+  'Dishwasher, rice cooker, coffee maker, juicer, and family kitchen essentials',
+  'Bedrooms 1 and 2 connect to a large outdoor sundeck overlooking the pool',
 ];
 
 export default function Page() {
@@ -36,7 +46,7 @@ export default function Page() {
           <p className="eyebrow">The Details Parents Notice</p>
           <h2>Less packing, less friction, more vacation.</h2>
           <p>We set the villa up around the little things that make traveling with babies, toddlers, kids, and grandparents easier. It is comfortable for adults, but genuinely practical for families.</p>
-          <p>The goal is simple: help families feel settled quickly so the trip can be about beach days, pool time, easy meals, and relaxed evenings together.</p>
+          <p>The goal is simple: help families feel settled quickly so the trip can be about beach days, pool time, easy meals, and relaxed evenings together.</p><p>Sea Turtle Villa also includes a baby bathtub and multiple smoke and carbon monoxide detectors, which are not always standard in the area.</p>
         </div>
         <div className="seo-callout">
           <h3>Family setup includes</h3>
@@ -45,15 +55,15 @@ export default function Page() {
       </section>
 
       <section className="seo-image-band three">
-        <img src="/images/local/baby-gear-packnplay-bathtub.jpg" alt="Pack-n-play and baby bathtub available for families" />
+        <img className="object-contain-photo" src="/images/local/baby-gear-packnplay-bathtub.jpg" alt="Pack-n-play and baby bathtub available for families" />
         <img src="/images/villa/living-play-space.jpg" alt="Family-friendly living space at Sea Turtle Villa" />
         <img src="/images/local/i-love-roatan-chair.jpg" alt="I Love Roatan family photo chair near Paradise Beach" />
       </section>
 
       <section className="seo-grid-3">
         <article><h3>Pool time is easy</h3><p>The shallow section is great for toddlers, while the main pool area stays manageable for family play and relaxed afternoons.</p></article>
-        <article><h3>The beach feels close</h3><p>About one block from the beach is close enough for easy trips, but still feels like a fun little adventure for younger kids.</p></article>
-        <article><h3>Rainy days still work</h3><p>The rooftop hot tub, covered spaces, games, kitchen, and living areas help families enjoy slower tropical moments too.</p></article>
+        <article><h3>Towels are practical</h3><p>We provide towels throughout the villa, and Paradise Beach Resort provides beach towels. We also installed towel hooks on the patio and in strategic areas inside the villa so towels are easier to hang and dry. Nobody likes wet towels.</p></article>
+        <article><h3>Rainy days still work</h3><p>The rooftop hot tub, covered spaces, games, Roku TVs, kitchen, and living areas help families enjoy slower tropical moments too.</p></article>
       </section>
 
       <section className="seo-split reverse">
@@ -61,9 +71,41 @@ export default function Page() {
         <div>
           <p className="eyebrow">Meals & Daily Rhythm</p>
           <h2>A kitchen that works for real family travel.</h2>
-          <p>The kitchen is equipped for quick breakfasts, snacks, smoothies, coffee, family dinners, and longer stays. Parents can keep routines simple without eating every meal out.</p>
+          <p>The kitchen is equipped for quick breakfasts, snacks, smoothies, coffee, family dinners, and longer stays. Parents can keep routines simple without eating every meal out.</p><p>Helpful extras include a dishwasher — not common in many villas in the complex — plus a rice cooker, Ninja coffee maker, Breville juicer, cookware, and everyday meal-prep essentials.</p>
           <p>For full groceries, stop at Eldon’s with Christian on the way from the airport. During your stay, West Bay Mall, Fresco Market, and nearby markets help with quick needs.</p>
         </div>
+      </section>
+
+
+      <section className="seo-split">
+        <div>
+          <p className="eyebrow">Comforts of Home</p>
+          <h2>The villa is stocked for real life, not just pretty photos.</h2>
+          <p>Families and longer-stay guests appreciate the small conveniences: hair dryer, cleaning products, shampoo, conditioner, body wash, hangers, extra pillows, room-darkening blinds, a safe for passports and valuables, plenty of clothes storage, Roku TVs, and reliable Starlink internet.</p>
+          <p>Bedrooms 1 and 2 connect to a large outdoor sundeck overlooking the pool, giving guests another place for morning coffee, reading, or quiet time while still feeling connected to the villa.</p>
+        </div>
+        <div className="seo-callout">
+          <h3>Helpful villa amenities</h3>
+          <ul>{comfortDetails.map((item) => <li key={item}>{item}</li>)}</ul>
+        </div>
+      </section>
+
+      <section className="seo-split reverse">
+        <img src="/images/local/paradise-beach-resort-pool.jpg" alt="Paradise Beach Resort pool available to Sea Turtle Villa guests" />
+        <div>
+          <p className="eyebrow">Villa Privacy + Resort Access</p>
+          <h2>More than one pool, plus resort support.</h2>
+          <p>In addition to the private Ocean One pool at Sea Turtle Villa, guests have access to Paradise Beach Resort amenities, including resort pool areas and beach towels. Families often appreciate having multiple places to swim, relax, and reset during the day.</p>
+        </div>
+      </section>
+
+      <section className="seo-split">
+        <div>
+          <p className="eyebrow">Extended Stays</p>
+          <h2>Planning to stay a little longer?</h2>
+          <p>Sea Turtle Villa welcomes long-term stays of 28 nights or longer. Reliable Starlink internet, Roku TVs, laundry, a full kitchen, dishwasher, storage, and comfortable indoor-outdoor spaces make extended stays practical and comfortable. Inquire with us for availability and longer-stay pricing.</p>
+        </div>
+        <img className="seo-side-image" src="/images/local/starlink-speed-test-100mbps.png" alt="Starlink speed test showing 100 Mbps at Sea Turtle Villa" />
       </section>
 
       <section className="seo-split">
